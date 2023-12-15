@@ -37,7 +37,7 @@
                 <input type="text" placeholder="應包含至少1個英文字母及1個數字" pattern="^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{1,20}$" oninput="filterInput(this)" title="填寫時請注意大小寫是否正確" maxlength="20" required /></p>
                 <p><span>密碼：</span>
                 <input type="password" id="PwdLog" placeholder="由大小寫英文及數字組成的6-20個混和字符" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,32}$" oninput="filterInput(this) " title="填寫時請注意大小寫是否正確" maxlength="20" required />
-                <img id="eyeIconLog" src="../image/icons/eye-close.png" alt="Hide Password" onclick="PasswordEye('PwdLog', 'eyeIconLog')" /></p>
+                <img id="eyeIconLog" class="TogCursor" src="../image/icons/eye-close.png" alt="Hide Password" onclick="PasswordEye('PwdLog', 'eyeIconLog')" /></p>
                 <div>
                     <input value="登入" id="AllSubmission" onclick="Sumbtion()"/>
                     <a href="Register.aspx">立即註冊</a>

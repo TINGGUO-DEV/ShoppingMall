@@ -37,10 +37,10 @@
             <input type="text" id="Acc" onblur="AccBlur(event)" placeholder="請以至少1個英文字母及1個數字做為帳號的命名" oninput="AccInput(this)" maxlength="20" required /></p>
             <p><span>輸入密碼：</span>
             <input type="password" id="Pwd1"placeholder="請輸入由大小寫英文及數字組成的6-20個混和字符" oninput="PwdIdInput(this); " maxlength="20" required />
-            <img id="eyeIcon1" src="../image/icons/eye-close.png" alt="Hide Password" onclick="PasswordEye('Pwd1', 'eyeIcon1')" /></p>
+            <img id="eyeIcon1" class="TogCursor" src="../image/icons/eye-close.png" alt="Hide Password" onclick="PasswordEye('Pwd1', 'eyeIcon1')" /></p>
             <p><span>密碼確認：</span>
             <input type="password" id="Pwd2" placeholder="請再輸入一次密碼" oninput="PwdIdInput(this); Check2Pwd();" title="請確認您輸入的密碼是否與上一列設定的密碼相同" maxlength="20" required />
-            <img id="eyeIcon2" src="../image/icons/eye-close.png" alt="Hide Password" onclick="PasswordEye('Pwd2', 'eyeIcon2')" /></p>
+            <img id="eyeIcon2"  class="TogCursor" src="../image/icons/eye-close.png" alt="Hide Password" onclick="PasswordEye('Pwd2', 'eyeIcon2')" /></p>
             <p><span>電子信箱：</span>
             <input type="email"id="Mail" placeholder="example@example.com" oninput="MailInput(this)" maxlength="50" required /></p>
             <p><span>手機號碼：</span>

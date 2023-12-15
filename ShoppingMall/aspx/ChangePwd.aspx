@@ -45,13 +45,13 @@
             <div class="AllInputBox">
                 <div>目前密碼：</div>
                 <div><input type="password" id="Pwd0"placeholder="請輸入目前設定的密碼" oninput="PwdIdInput(this); " maxlength="20" required />
-                <img id="eyeIcon0" src="../image/icons/eye-close.png" alt="Hide Password" onclick="PasswordEye('Pwd0', 'eyeIcon0')" /></div>
+                <img id="eyeIcon0" class="TogCursor" src="../image/icons/eye-close.png" alt="Hide Password" onclick="PasswordEye('Pwd0', 'eyeIcon0')" /></div>
                 <div>新密碼：</div>
                 <div><input type="password" id="Pwd1"placeholder="請輸入由大小寫英文及數字組成的6-20個混和字符" oninput="PwdIdInput(this); " maxlength="20" required />
-                <img id="eyeIcon1" src="../image/icons/eye-close.png" alt="Hide Password" onclick="PasswordEye('Pwd1', 'eyeIcon1')" /></div>
+                <img id="eyeIcon1" class="TogCursor" src="../image/icons/eye-close.png" alt="Hide Password" onclick="PasswordEye('Pwd1', 'eyeIcon1')" /></div>
                 <div>新密碼確認：</div>
                 <div><input type="password" id="Pwd2" placeholder="請再輸入一次密碼" oninput="PwdIdInput(this); Check2Pwd();" title="請確認您輸入的密碼是否與上一列設定的密碼相同" maxlength="20" required />
-                <img id="eyeIcon2" src="../image/icons/eye-close.png" alt="Hide Password" onclick="PasswordEye('Pwd2', 'eyeIcon2')" /></div>
+                <img id="eyeIcon2" class="TogCursor" src="../image/icons/eye-close.png" alt="Hide Password" onclick="PasswordEye('Pwd2', 'eyeIcon2')" /></div>
                 <div><input value="取消" id="AllSubmissionCancel" onclick="Sumbtion()"/><input value="確認修改" id="AllSubmission" onclick="Sumbtion()"/></div>
              </div>   
         </div>   

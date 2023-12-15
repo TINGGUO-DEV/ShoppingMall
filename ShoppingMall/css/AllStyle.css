@@ -110,6 +110,10 @@
             filter: invert(1);  /* 暫時先用，之後要換成別的用法，目前只能在深色模式下變白色，淺色模式也會變白色，改成用svg檔，並用@madia 修改icon顏色*/
         }
 
+.TogCursor {
+    cursor:pointer;
+}
+
 #HomeBannerImage img {
     width: 100%;
     height: auto;
