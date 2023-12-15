@@ -1,0 +1,241 @@
+﻿#AllWebTitle {
+    font-size: 40px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #888888;
+}
+
+#AllSubTitle {                                   /*頁尾*/
+    font-size: 20px;
+    margin: 20px;
+    text-align: center;
+    color: #888888;
+}
+
+#AllSubmission {                                 /*提交按鈕*/
+    width: 130px;
+    height: 45px;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #64A600;
+    font-weight: 700;
+    margin-top: 20px;
+    border-radius: 5px;
+    border:none;
+    cursor: pointer;
+    text-align:center;
+}
+
+    #AllSubmission:hover {
+        background-color: red;
+    }
+#AllSubmissionCancel {
+    width: 130px;
+    height: 45px;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+    #AllSubmissionCancel:hover {
+        background-color: red;
+    }
+
+.AllLinkBtn {
+    text-align: center;
+    cursor: pointer;
+    margin: 30px;
+}
+    .AllLinkBtn a {
+        margin-left: 20px;
+        color: inherit;
+        cursor: pointer;
+    }
+
+    .AllLinkBtn a:hover {
+        color: #00FFFF;
+    }
+
+    
+    
+#AllContainer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 40px;
+}
+
+    .AllInputBox {                            /*包在輸入框外的框*/
+        width: 450px;
+        text-align: left;
+        margin:50px;
+        margin-left:10%;
+    }
+
+        .AllInputBox input {                 /*輸入框*/
+            border: 1px solid #34c2ff;
+            height: 30px;
+            width: 300px;
+            margin-bottom: 20px;
+        }
+
+            .AllInputBox input:valid {
+                border: 2px solid green;
+            }
+
+            .AllInputBox input:invalid:not(:placeholder-shown) {
+                border: 2px solid red;
+            }
+
+        .AllInputBox a {
+            margin-left: 20px;
+            color: inherit;
+            cursor: pointer;
+        }
+
+            .AllInputBox a:hover {
+                color: #00FFFF;
+            }
+
+        .AllInputBox img {
+            width: 30px;
+            height: auto;
+            filter: invert(1);  /* 暫時先用，之後要換成別的用法，目前只能在深色模式下變白色，淺色模式也會變白色，改成用svg檔，並用@madia 修改icon顏色*/
+        }
+
+#HomeBannerImage img {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+#NavContainer {
+    display: flex;
+}
+
+    .NavBars {
+        flex: auto;
+        display: flex;
+        justify-content: flex-start;
+        margin-left:20px;
+    }
+
+        .NavBars a {
+            font-size: 20px;
+            text-decoration: none;
+            color: #272727;
+            margin: 10px;
+            margin-right: 30px;
+            cursor: pointer;
+        }
+
+            .NavBars a:hover {
+                color: #00FFFF;
+            }
+
+    .NvaIcons {
+        justify-content: flex-end;
+        display: flex;
+        cursor: pointer;
+    }
+
+        .NvaIcons img {
+            width: 30px;
+            height: 30px;
+            margin-right: 30px;
+            /*/filter: invert(1); 不安全，在不同瀏覽器有不一樣的效用*/ 
+        }
+
+            .NvaIconsUser {
+                position: relative;
+            }
+
+                .NvaIconsPopUp {
+                    display: none;
+                    position: absolute;
+                    background-color: #003E3E;
+                    width: 120px;
+                    height: 100px;
+                    border-radius: 5px;
+                    top: 35px; /* 距離 NvaIconsUser 底部的距離 */
+                    right: 35px;
+                }
+                    .NvaIconsPopUp button {
+                        width: auto;
+                        height: 50%;
+                        margin: auto;
+                        font-size: 20px;
+                        background-color: transparent;
+                        border: none;
+                        color: #ffffff;
+                        cursor: pointer;
+                        display: block;
+                    }
+
+                        .NvaIconsPopUp button:hover {
+                            color: #00FFFF;
+                        }
+
+
+        #MbrContainer { /*Mbr 會員中心*/
+            display: flex;
+        }
+
+    #MbrRightSpace {
+        flex: auto;
+        justify-content: center;
+        display: flex;
+        border: 3px solid #003E3E;
+        height: 500px;
+        width: 95%;
+        border-radius: 10px;
+        margin-right: 350px;
+        margin-left: 15px;
+        margin-top: 40px;
+    }
+
+
+
+#MbrNavContainer {
+    flex: none;
+    height: 500px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: #003E3E;
+    margin-top: 40px;
+    margin-left: 12%;
+}
+
+        .MbrNavBars {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+        }
+            .MbrNavBars p {
+                display: flex;
+                align-items: center;
+                margin: 20px;
+                font-size: 25px;
+                color: #BEBEBE;
+                border-bottom: 2px solid #BEBEBE;
+            }
+
+            .MbrNavBars a {
+                font-size: 20px;
+                text-decoration: none;
+                color: white;
+                margin: 10px;
+                cursor: pointer;
+            }
+
+                .MbrNavBars a:hover {
+                    color: #00FFFF;
+                }

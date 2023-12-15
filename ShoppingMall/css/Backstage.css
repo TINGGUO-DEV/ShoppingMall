@@ -1,0 +1,37 @@
+﻿#BSWeb {
+    display: flex;
+}
+#BSWebTitle {
+    font-size: 30px;
+    flex: auto;
+    margin-left: 40%;
+}
+
+#BSNavContainer {
+    flex: none;
+    height: 100vh;
+    width: 150px;
+    background-color: #003E3E;
+}
+
+    .BSNavBars {
+        margin-top:40px;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+
+    }
+
+        .BSNavBars a {
+            font-size: 25px;
+            text-decoration: none;
+            color: white;
+            margin: 10px;
+        }
+
+            .BSNavBars a:hover {
+                color: #00FFFF;
+            }
+
+
+
