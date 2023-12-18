@@ -1,7 +1,7 @@
 ﻿
 
-function MailInput(Mail) {
-    Mail.value = Mail.value.replace(/[^a-zA-Z0-9@.-]/g, '');
+function NumInput(Num) {
+    Num.value = Num.value.replace(/[^\d]/g, '');
 }
 
 function Sumbtion() {
@@ -19,11 +19,12 @@ function Sumbtion() {
 
         success: function (data) {
             if (data.status === 0) {
-                alert("驗證碼已發送");
+                alert("信箱已成功認證");
                 window.location.href = "Login.aspx";
 
-            } else if (data.status === 1) {
-                alert("查無此信箱");
+            } else if (data.status === 1) {           //出現彈窗，有"重新發送驗證碼"及"回到註冊頁"()
+                
+
             } 
 
         },

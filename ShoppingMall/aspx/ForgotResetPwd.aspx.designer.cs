@@ -11,7 +11,7 @@ namespace ShoppingMall.aspx
 {
 
 
-    public partial class ShopCash
+    public partial class ForgotResetPwd
     {
     }
 }

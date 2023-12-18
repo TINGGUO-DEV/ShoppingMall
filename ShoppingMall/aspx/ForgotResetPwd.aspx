@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ForgotPwd.aspx.cs" Inherits="ShoppingMall.aspx.ResetPwd1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ForgotResetPwd.aspx.cs" Inherits="ShoppingMall.aspx.ForgotResetPwd" %>
 
 <!DOCTYPE html>
 
@@ -38,7 +38,7 @@
                 <div><input value="發送驗證碼" id="AllSubmission" onclick="Sumbtion()"/></div>
             </div>
         </div>
-        <script src="../js/ForgotPwd.js"></script>
+        <script src="../js/ForgotResetPwd.js"></script>
         <script src="../js/PopUp.js"></script>
         <script src="../js/AllJs.js"></script>
 </body>

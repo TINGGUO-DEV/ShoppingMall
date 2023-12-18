@@ -36,15 +36,15 @@
             <p><span>創建帳號：</span>
             <input type="text" id="Acc" onblur="AccBlur(event)" placeholder="請以至少1個英文字母及1個數字做為帳號的命名" oninput="AccInput(this)" maxlength="20" required /></p>
             <p><span>輸入密碼：</span>
-            <input type="password" id="Pwd1"placeholder="請輸入由大小寫英文及數字組成的6-20個混和字符" oninput="PwdIdInput(this); " maxlength="20" required />
+            <input type="password" id="Pwd1"onblur="Pwd1Blur(event)" placeholder="請以大小寫字母各1及1個數字組成6-20個混和字符" oninput="PwdIdInput(this); " maxlength="20" required />
             <img id="eyeIcon1" class="TogCursor" src="../image/icons/eye-close.png" alt="Hide Password" onclick="PasswordEye('Pwd1', 'eyeIcon1')" /></p>
             <p><span>密碼確認：</span>
-            <input type="password" id="Pwd2" placeholder="請再輸入一次密碼" oninput="PwdIdInput(this); Check2Pwd();" title="請確認您輸入的密碼是否與上一列設定的密碼相同" maxlength="20" required />
+            <input type="password" id="Pwd2" onblur="Pwd2Blur(event)" placeholder="請再輸入一次密碼" oninput="PwdIdInput(this)" title="請確認您輸入的密碼是否與上一列設定的密碼相同" maxlength="20" required />
             <img id="eyeIcon2"  class="TogCursor" src="../image/icons/eye-close.png" alt="Hide Password" onclick="PasswordEye('Pwd2', 'eyeIcon2')" /></p>
             <p><span>電子信箱：</span>
-            <input type="email"id="Mail" placeholder="example@example.com" oninput="MailInput(this)" maxlength="50" required /></p>
+            <input type="email"id="Mail" onblur="MailBlur(event)" placeholder="example@example.com" oninput="MailInput(this)" maxlength="50" required /></p>
             <p><span>手機號碼：</span>
-            <input type="tel" id="Phone" name="phone" placeholder="0912345678" oninput="PhoneInput(this)" maxlength="10" pattern="^09\d{8}" title="請確保您輸入的是09開頭的十位電話號碼" required /></p>
+            <input type="tel" id="Phone" onblur="PhoneBlur(event)" placeholder="0912345678" oninput="PhoneInput(this)" maxlength="10" pattern="^09\d{8}" title="請確保您輸入的是09開頭的十位電話號碼" required /></p>
             <div><input value="立即註冊" id="AllSubmission" onclick="Sumbtion()"/><a href="login.aspx">已有帳號(點擊登入)</a></div>        
         </div>       
     </div>

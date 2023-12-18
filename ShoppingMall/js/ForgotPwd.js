@@ -16,7 +16,7 @@
         success: function (data) {
             if (data.status === 0) {
                 alert("成功登入");
-                window.location.href = "VerifyCode.aspx";
+                window.location.href = "ForgotResetPwd.aspx";
 
             } else if (data.status === 1) {
                 alert("帳號or密碼錯誤");

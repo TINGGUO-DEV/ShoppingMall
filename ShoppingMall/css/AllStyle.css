@@ -30,6 +30,7 @@
     #AllSubmission:hover {
         background-color: red;
     }
+
 #AllSubmissionCancel {
     width: 130px;
     height: 45px;
@@ -109,6 +110,24 @@
             height: auto;
             filter: invert(1);  /* 暫時先用，之後要換成別的用法，目前只能在深色模式下變白色，淺色模式也會變白色，改成用svg檔，並用@madia 修改icon顏色*/
         }
+.AllLittleBtn {
+    width: 60px;
+    height: 30px;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #64A600;
+    font-weight: 600;
+    margin-left: 15px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+    .AllLittleBtn:hover {
+        background-color: red;
+        border-radius: 3px;
+    }
 
 .TogCursor {
     cursor:pointer;
@@ -188,58 +207,58 @@
                         }
 
 
-        #MbrContainer { /*Mbr 會員中心*/
-            display: flex;
-        }
+#MbrContainer { /*Mbr 會員中心*/
+    display: flex;
+}
 
     #MbrRightSpace {
-        flex: auto;
-        justify-content: center;
-        display: flex;
-        border: 3px solid #003E3E;
-        height: 500px;
-        width: 95%;
-        border-radius: 10px;
-        margin-right: 350px;
-        margin-left: 15px;
-        margin-top: 40px;
+    flex: auto;
+    justify-content: center;
+    display: flex;
+    border: 3px solid #003E3E;
+    height: 500px;
+    width: 95%;
+    border-radius: 10px;
+    margin-right: 350px;
+    margin-left: 15px;
+    margin-top: 40px;
     }
 
 
 
-#MbrNavContainer {
-    flex: none;
-    height: 500px;
-    width: 150px;
-    border-radius: 10px;
-    background-color: #003E3E;
-    margin-top: 40px;
-    margin-left: 12%;
-}
+    #MbrNavContainer {
+        flex: none;
+        height: 500px;
+        width: 150px;
+        border-radius: 10px;
+        background-color: #003E3E;
+        margin-top: 40px;
+        margin-left: 12%;
+    }
 
-        .MbrNavBars {
-            margin-top: 40px;
-            display: flex;
-            flex-direction: column;
-            align-items: center; 
-        }
-            .MbrNavBars p {
+            .MbrNavBars {
+                margin-top: 40px;
                 display: flex;
-                align-items: center;
-                margin: 20px;
-                font-size: 25px;
-                color: #BEBEBE;
-                border-bottom: 2px solid #BEBEBE;
+                flex-direction: column;
+                align-items: center; 
             }
-
-            .MbrNavBars a {
-                font-size: 20px;
-                text-decoration: none;
-                color: white;
-                margin: 10px;
-                cursor: pointer;
-            }
-
-                .MbrNavBars a:hover {
-                    color: #00FFFF;
+                .MbrNavBars p {
+                    display: flex;
+                    align-items: center;
+                    margin: 20px;
+                    font-size: 25px;
+                    color: #BEBEBE;
+                    border-bottom: 2px solid #BEBEBE;
                 }
+
+                .MbrNavBars a {
+                    font-size: 20px;
+                    text-decoration: none;
+                    color: white;
+                    margin: 10px;
+                    cursor: pointer;
+                }
+
+                    .MbrNavBars a:hover {
+                        color: #00FFFF;
+                    }

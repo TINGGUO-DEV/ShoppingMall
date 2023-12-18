@@ -33,8 +33,8 @@
     </div>
         <div id= "AllContainer">
             <div class="AllInputBox">
-                <p><span>請輸入信箱收到的六位數驗證碼：</span>
-                <input type="email"id="Mail" placeholder="example@example.com" oninput="MailInput(this)" maxlength="50" required /></p>
+                <p>請輸入信箱收到的六位數驗證碼：</p>
+                <p><input type="email"id="Mail" placeholder="ex.1231456" oninput="NumInput(this)" maxlength="50" required /></p>
                 <div><input value="確認" id="AllSubmission" onclick="Sumbtion()" /></div>     
             </div>
             

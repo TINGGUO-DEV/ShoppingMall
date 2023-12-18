@@ -32,11 +32,60 @@ function MailInput(Mail) {
 function AccBlur(e) {
     var target = e.currentTarget;
     var value = target.value;
-    var regex = new RegExp('(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{1,20}$');
-
-    if (regex.test(value) == false) {
-        alert('請確認您輸入的帳號至少包含1個英文字母及1個數字');
+ 
+    if (value.match(/(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{1,20}$/) == null){
+        target.style.borderColor = "red";
         return;
+
+    } else {
+        target.style.borderColor = "green";
+    }
+
+}
+
+function Pwd1Blur(e) {
+    var target = e.currentTarget;
+    var value = target.value;
+
+    if (value.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,20}$/) == null) {
+        target.style.borderColor = "red";
+    } else {
+        target.style.borderColor = "green";
+    }
+}
+
+function Pwd2Blur(e) {
+    var target = e.currentTarget;
+    var value = target.value;
+
+    if (value.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,20}$/) == null) {
+        target.style.borderColor = "red";
+    } else {
+        target.style.borderColor = "green";
+    }
+
+    Check2Pwd();
+}
+
+function MailBlur(e) {
+    var target = e.currentTarget;
+    var value = target.value;
+
+    if (value.match(/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9]+\.\w+([-.]\w+)*$/) == null) {
+        target.style.borderColor = "red";
+    } else {
+        target.style.borderColor = "green";
+    }
+}
+
+function PhoneBlur(e) {
+    var target = e.currentTarget;
+    var value = target.value;
+
+    if (value.match(/^09\d{8}$/) == null) {
+        target.style.borderColor = "red";
+    } else {
+        target.style.borderColor = "green";
     }
 }
 
@@ -47,10 +96,25 @@ function Sumbtion() {
     var pwdSec = $('#Pwd2').val();
     var mail = $('#Mail').val();
     var phone = $('#Phone').val();
-    var regex = new RegExp('(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{1,20}$');
 
-    if (regex.test(acc) == false) {
-        alert('帳號不符規則');
+    if (acc.match(/(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{1,20}$/) == null) {
+        alert('請確認您輸入的帳號至少包含1個英文字母及1個數字');
+        return;
+    }
+    if (pwd.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,20}$/) == null) {
+        alert('請確認您輸入的密碼是由大小寫字母各1及1個數字組成的6-20個混和字符');
+        return;
+    }
+    if (pwdSec.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,20}$/) == null) {
+        alert('請確認您輸入的密碼是否與上一列設定的密碼相同');
+        return;
+    }
+    if (mail.match(/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9]+\.\w+([-.]\w+)*$/) == null) {
+        alert('請確認您輸入的信箱格式是否正確');
+        return;
+    }
+    if (phone.match(/^09\d{8}$/) == null) {
+        alert('請確保您輸入的是09開頭的十位電話號碼');
         return;
     }
 
@@ -91,7 +155,7 @@ function Sumbtion() {
 
             } else if (data.status === 1024) {
                 alert("註冊成功");
-                window.location.href = "Login.aspx";
+                window.location.href = "VerifyCode.aspx";
             }
         },
         error: function (xhr, status, error) {

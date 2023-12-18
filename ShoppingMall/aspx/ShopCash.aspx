@@ -44,6 +44,8 @@
         <div id="MbrRightSpace">
             <div class="AllInputBox">
                 <p><span>當前可用餘額：</span>text</p>
+                <p><span>儲值金額：</span>
+                <input type="text" id="orderId" name="orderId" placeholder="請輸入您要儲值的金額" oninput="orderIdInput(this)" maxlength="5" required /></p>
                 <div><input value="儲值" id="AllSubmission" onclick="Sumbtion()"/><a href="">交易紀錄查詢</a></div>
             </div>   
         </div>
