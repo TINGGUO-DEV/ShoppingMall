@@ -7,11 +7,11 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace ShoppingMall.ajax
+namespace ShoppingMall.aspx
 {
 
 
-    public partial class AjaxMember
+    public partial class Order
     {
     }
 }

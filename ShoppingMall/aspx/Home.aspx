@@ -6,8 +6,9 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Shopping Mall</title>
-    <link rel="stylesheet" href="../css/AllStyle.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="../js/AllJs.js" type="text/javascript"></script>
+    <link href="../css/AllStyle.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
         <div id="AllWebTitle">Home</div>
@@ -33,6 +34,5 @@
         </div>
         <div id="HomeBannerImage"><img src="../image/banners/banner1.jpg" /></div>
         <div id="AllSubTitle">Welcome to our online shopping website</div>
-        <script src="../js/PopUp.js"></script>
 </body>
 </html>

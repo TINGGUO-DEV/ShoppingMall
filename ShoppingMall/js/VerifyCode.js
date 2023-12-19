@@ -39,13 +39,13 @@ function Sumbtion() {
     });
 };
 
-/* 正確的測試帳密
+/*這裡使用的是表是t_memberResetToken(密碼重置Token表)，參數為token
+
+* 正確的測試帳密
 
 $('#Mail').val('12@21');
 
-*/
-
-/*不正確的測試帳密
+*不正確的測試帳密
 
 $('#Mail').val('12');
 

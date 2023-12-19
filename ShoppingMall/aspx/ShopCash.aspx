@@ -6,8 +6,11 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>購物金</title>
-    <link rel="stylesheet" href="../css/AllStyle.css" />
+    
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="../js/AllJs.js" type="text/javascript"></script>
+    <script src="../js/ShopCash.js" type="text/javascript"></script>
+    <link href="../css/AllStyle.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
     <div id="AllWebTitle">會員中心</div>
@@ -50,8 +53,5 @@
             </div>   
         </div>
     </div>
-<script src="../js/ShopCash.js"></script>
-<script src="../js/PopUp.js"></script> 
-<script src="../js/AllJs.js"></script>
 </body>
 </html>

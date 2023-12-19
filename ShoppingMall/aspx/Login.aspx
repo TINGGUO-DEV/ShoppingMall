@@ -6,8 +6,10 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>登入帳號</title>
-    <link rel="stylesheet" href="../css/AllStyle.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="../js/AllJs.js" type="text/javascript"></script>
+    <script src="../js/Login.js" type="text/javascript"></script>
+    <link href="../css/AllStyle.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
         <div id="AllWebTitle">登入帳號</div>
@@ -34,10 +36,10 @@
         <div id= "AllContainer">
             <div class="AllInputBox">
                 <p><span>帳號：</span>
-                <input type="text" placeholder="應包含至少1個英文字母及1個數字" pattern="^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{1,20}$" oninput="filterInput(this)" title="填寫時請注意大小寫是否正確" maxlength="20" required /></p>
+                <input type="text" id="Acc" onblur="AccBlur(event)" placeholder="請輸入您的帳號" oninput="AccInput(this)" title="請注意大小寫是否正確" maxlength="20"/></p>
                 <p><span>密碼：</span>
-                <input type="password" id="PwdLog" placeholder="由大小寫英文及數字組成的6-20個混和字符" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,32}$" oninput="filterInput(this) " title="填寫時請注意大小寫是否正確" maxlength="20" required />
-                <img id="eyeIconLog" class="TogCursor" src="../image/icons/eye-close.png" alt="Hide Password" onclick="PasswordEye('PwdLog', 'eyeIconLog')" /></p>
+                <input type="password" id="PwdLog"onblur="PwdLogBlur(event)" placeholder="請輸入您的密碼" oninput="PwdLogInput(this)" title="請注意大小寫是否正確" maxlength="20"/>
+                    <img id="eyeIconLog" class="TogCursor" src="../image/icons/eye-close.png" alt="Hide Password" onclick="PasswordEye('PwdLog', 'eyeIconLog')" /></p>
                 <div>
                     <input value="登入" id="AllSubmission" onclick="Sumbtion()"/>
                     <a href="Register.aspx">立即註冊</a>
@@ -45,8 +47,5 @@
                 </div>
             </div>
         </div>
-        <script src="../js/Login.js"></script>
-        <script src="../js/PopUp.js"></script>
-        <script src="../js/AllJs.js"></script>
 </body>
 </html>

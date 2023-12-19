@@ -88,8 +88,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ajax\member.aspx" />
-    <Content Include="ajax\practice.aspx" />
+    <Content Include="ajax\Member.aspx" />
     <Content Include="aspx\AllProd.aspx" />
     <Content Include="aspx\CEProd.aspx" />
     <Content Include="aspx\ChangePwd.aspx" />
@@ -98,19 +97,19 @@
     <Content Include="aspx\Home.aspx" />
     <Content Include="aspx\Login.aspx" />
     <Content Include="aspx\Member.aspx" />
-    <Content Include="aspx\OrderInquiry.aspx" />
+    <Content Include="aspx\Order.aspx" />
     <Content Include="aspx\Register.aspx" />
     <Content Include="aspx\VerifyCode.aspx" />
     <Content Include="aspx\ForgotPwd.aspx" />
     <Content Include="aspx\ShopCash.aspx" />
-    <Content Include="bs_aspx\BSAcc.aspx" />
-    <Content Include="bs_aspx\BSLogin.aspx" />
-    <Content Include="bs_aspx\BSMember.aspx" />
-    <Content Include="bs_aspx\BSOrder.aspx" />
-    <Content Include="bs_aspx\BSProduct.aspx" />
-    <Content Include="bs_js\BSAllJs.js" />
-    <Content Include="bs_js\BSLogin.js" />
-    <Content Include="bs_js\BSPopUp.js" />
+    <Content Include="aspx\BSAcc.aspx" />
+    <Content Include="aspx\BSLogin.aspx" />
+    <Content Include="aspx\BSMember.aspx" />
+    <Content Include="aspx\BSOrder.aspx" />
+    <Content Include="aspx\BSProd.aspx" />
+    <Content Include="js\BSAllJs.js" />
+    <Content Include="js\BSLogin.js" />
+    <Content Include="js\BSPopUp.js" />
     <Content Include="css\AllStyle.css" />
     <Content Include="css\BSAllStyle.css" />
     <Content Include="image\banners\Banner1.jpg" />
@@ -124,38 +123,30 @@
     <Content Include="image\icons\user.png" />
     <Content Include="js\AllJs.js" />
     <Content Include="js\AllProd.js" />
-    <Content Include="bs_js\BSAcc.js" />
-    <Content Include="bs_js\BSMember.js" />
-    <Content Include="bs_js\BSOrder.js" />
-    <Content Include="bs_js\BSProduct.js" />
+    <Content Include="js\BSAcc.js" />
+    <Content Include="js\BSMember.js" />
+    <Content Include="js\BSOrder.js" />
+    <Content Include="js\BSProd.js" />
     <Content Include="js\CEProd.js" />
     <Content Include="js\ChangePwd.js" />
     <Content Include="js\FavProd.js" />
     <Content Include="js\ForgotResetPwd.js" />
     <Content Include="js\Login.js" />
     <Content Include="js\Member.js" />
-    <Content Include="js\OrderInquiry.js" />
+    <Content Include="js\Order.js" />
     <Content Include="js\Register.js" />
     <Content Include="js\VerifyCode.js" />
     <Content Include="js\ForgotPwd.js" />
     <Content Include="js\ShopCash.js" />
-    <Content Include="js\PopUp.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ajax\member.aspx.cs">
-      <DependentUpon>member.aspx</DependentUpon>
+    <Compile Include="ajax\Member.aspx.cs">
+      <DependentUpon>Member.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ajax\member.aspx.designer.cs">
-      <DependentUpon>member.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ajax\practice.aspx.cs">
-      <DependentUpon>practice.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ajax\practice.aspx.designer.cs">
-      <DependentUpon>practice.aspx</DependentUpon>
+    <Compile Include="ajax\Member.aspx.designer.cs">
+      <DependentUpon>Member.aspx</DependentUpon>
     </Compile>
     <Compile Include="app_code\BasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
@@ -216,12 +207,12 @@
     <Compile Include="aspx\Member.aspx.designer.cs">
       <DependentUpon>Member.aspx</DependentUpon>
     </Compile>
-    <Compile Include="aspx\OrderInquiry.aspx.cs">
-      <DependentUpon>OrderInquiry.aspx</DependentUpon>
+    <Compile Include="aspx\Order.aspx.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="aspx\OrderInquiry.aspx.designer.cs">
-      <DependentUpon>OrderInquiry.aspx</DependentUpon>
+    <Compile Include="aspx\Order.aspx.designer.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
     </Compile>
     <Compile Include="aspx\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
@@ -251,40 +242,40 @@
     <Compile Include="aspx\ShopCash.aspx.designer.cs">
       <DependentUpon>ShopCash.aspx</DependentUpon>
     </Compile>
-    <Compile Include="bs_aspx\BSAcc.aspx.cs">
+    <Compile Include="aspx\BSAcc.aspx.cs">
       <DependentUpon>BSAcc.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="bs_aspx\BSAcc.aspx.designer.cs">
+    <Compile Include="aspx\BSAcc.aspx.designer.cs">
       <DependentUpon>BSAcc.aspx</DependentUpon>
     </Compile>
-    <Compile Include="bs_aspx\BSLogin.aspx.cs">
+    <Compile Include="aspx\BSLogin.aspx.cs">
       <DependentUpon>BSLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="bs_aspx\BSLogin.aspx.designer.cs">
+    <Compile Include="aspx\BSLogin.aspx.designer.cs">
       <DependentUpon>BSLogin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="bs_aspx\BSMember.aspx.cs">
+    <Compile Include="aspx\BSMember.aspx.cs">
       <DependentUpon>BSMember.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="bs_aspx\BSMember.aspx.designer.cs">
+    <Compile Include="aspx\BSMember.aspx.designer.cs">
       <DependentUpon>BSMember.aspx</DependentUpon>
     </Compile>
-    <Compile Include="bs_aspx\BSOrder.aspx.cs">
+    <Compile Include="aspx\BSOrder.aspx.cs">
       <DependentUpon>BSOrder.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="bs_aspx\BSOrder.aspx.designer.cs">
+    <Compile Include="aspx\BSOrder.aspx.designer.cs">
       <DependentUpon>BSOrder.aspx</DependentUpon>
     </Compile>
-    <Compile Include="bs_aspx\BSProduct.aspx.cs">
-      <DependentUpon>BSProduct.aspx</DependentUpon>
+    <Compile Include="aspx\BSProd.aspx.cs">
+      <DependentUpon>BSProd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="bs_aspx\BSProduct.aspx.designer.cs">
-      <DependentUpon>BSProduct.aspx</DependentUpon>
+    <Compile Include="aspx\BSProd.aspx.designer.cs">
+      <DependentUpon>BSProd.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

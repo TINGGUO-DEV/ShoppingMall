@@ -12,13 +12,12 @@ function Check2Pwd() {
         Pwd2.style.border = '2px solid red';
     }
 }
+function AccInput(Acc) {
+    Acc.value = Acc.value.replace(/[^a-zA-Z\d]/g, '');
+}
 
 function PwdIdInput(PwdId) {
     PwdId.value = PwdId.value.replace(/[^a-zA-Z\d]/g, '');
-}
-
-function AccInput(Acc) {
-    Acc.value = Acc.value.replace(/[^a-zA-Z\d]/g, '');
 }
 
 function PhoneInput(Phone) {
@@ -26,7 +25,7 @@ function PhoneInput(Phone) {
 }
 
 function MailInput(Mail) {
-    Mail.value = Mail.value.replace(/[^a-zA-Z\d@.-]/g, '');
+    Mail.value = Mail.value.replace(/^[^a-zA-Z\d]|[^a-zA-Z\d@.-]/g, '');
 }
 
 function AccBlur(e) {
@@ -35,12 +34,9 @@ function AccBlur(e) {
  
     if (value.match(/(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{1,20}$/) == null){
         target.style.borderColor = "red";
-        return;
-
     } else {
         target.style.borderColor = "green";
     }
-
 }
 
 function Pwd1Blur(e) {
@@ -71,7 +67,7 @@ function MailBlur(e) {
     var target = e.currentTarget;
     var value = target.value;
 
-    if (value.match(/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9]+\.\w+([-.]\w+)*$/) == null) {
+    if (value.match(/^[a-zA-Z0-9]+[\w.-]*[a-zA-Z0-9]+@[a-zA-Z0-9]+\.\w+[a-zA-Z0-9]+$/) == null) {
         target.style.borderColor = "red";
     } else {
         target.style.borderColor = "green";
@@ -90,7 +86,6 @@ function PhoneBlur(e) {
 }
 
 function Sumbtion() {
-
     var acc = $('#Acc').val();
     var pwd = $('#Pwd1').val();
     var pwdSec = $('#Pwd2').val();
@@ -101,25 +96,29 @@ function Sumbtion() {
         alert('請確認您輸入的帳號至少包含1個英文字母及1個數字');
         return;
     }
+
     if (pwd.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,20}$/) == null) {
         alert('請確認您輸入的密碼是由大小寫字母各1及1個數字組成的6-20個混和字符');
         return;
     }
+
     if (pwdSec.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,20}$/) == null) {
         alert('請確認您輸入的密碼是否與上一列設定的密碼相同');
         return;
     }
+
     if (mail.match(/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9]+\.\w+([-.]\w+)*$/) == null) {
         alert('請確認您輸入的信箱格式是否正確');
         return;
     }
+
     if (phone.match(/^09\d{8}$/) == null) {
         alert('請確保您輸入的是09開頭的十位電話號碼');
         return;
     }
 
     $.ajax({
-        url: "/ajax/member.aspx",
+        url: "/ajax/Member.aspx",
         method: "POST",
         data: {
             method: 'register',
@@ -128,14 +127,12 @@ function Sumbtion() {
             pwdSec: pwdSec,
             mail: mail,
             phone: phone,
-
         },
         dataType: 'json',
 
         success: function (data) {
             if (data.status === 0) {
                 alert("非預期錯誤");
-                console.error("非預期錯誤信息:", data.errorDetails);
 
             } else if (data.status & 1 == 1) {
                 alert("帳號不符合規則");
@@ -158,13 +155,9 @@ function Sumbtion() {
                 window.location.href = "VerifyCode.aspx";
             }
         },
+
         error: function (xhr, status, error) {
-
-            console.log("Status: " + status);
-            console.log("Error: " + error);
-            console.log(xhr);
             alert("註冊失敗，請稍後重試或聯繫客服");
-
         }
     });
 };
@@ -173,8 +166,8 @@ function Sumbtion() {
 
 $('#Acc').val('a12');
 $('#Pwd1').val('a123546A');
-$('#Pwd2').val('a123456A');
-$('#Mail').val('12@21');
+$('#Pwd2').val('a123546A');
+$('#Mail').val('12@21.com');
 $('#Phone').val('0912345678');
 
 */

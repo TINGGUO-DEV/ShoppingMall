@@ -1,13 +1,48 @@
-﻿function filterInput(Input) {
-    Input.value = Input.value.replace(/[^a-zA-Z0-9]/g, '');
+﻿function AccInput(Acc) {
+    Acc.value = Acc.value.replace(/[^a-zA-Z\d]/g, '');
+}
+
+function PwdLogInput(PwdLog) {
+    PwdLog.value = PwdLog.value.replace(/[^a-zA-Z\d]/g, '');
+}
+
+function AccBlur(e) {
+    var target = e.currentTarget;
+    var value = target.value;
+
+    if (value.match(/(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{1,20}$/) == null) {
+        target.style.borderColor = "red";
+    } else {
+        target.style.borderColor = "green";
+    }
+}
+
+function PwdLogBlur(e) {
+    var target = e.currentTarget;
+    var value = target.value;
+
+    if (value.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,20}$/) == null) {
+        target.style.borderColor = "red";
+    } else {
+        target.style.borderColor = "green";
+    }
 }
 
 function Sumbtion() {
     var acc = $('#Acc').val();
     var pwd = $('#Pwd1').val();
 
+    if (acc.match(/(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{1,20}$/) == null) {
+        alert('請確認您輸入的帳號至少包含1個英文字母及1個數字');
+        return;
+    }
+    if (pwd.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,20}$/) == null) {
+        alert('請確認您輸入的密碼是由大小寫字母各1及1個數字組成的6-20個混和字符');
+        return;
+    }
+
     $.ajax({
-        url: "/ajax/member.aspx",
+        url: "/ajax/Member.aspx",
         method: "POST",
         data: {
             method: 'login',
@@ -20,7 +55,7 @@ function Sumbtion() {
         success: function (data) {
             if (data.status === 0) {
                 alert("成功登入");
-                window.location.href = "全部商品頁";
+                window.location.href = "AllProd.aspx";
 
             } else if (data.status === 1) {
                 alert("帳號or密碼錯誤");

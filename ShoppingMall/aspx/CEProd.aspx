@@ -6,6 +6,10 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>3C家電</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="../js/AllJs.js" type="text/javascript"></script>
+    <script src="../js/CEProd.js" type="text/javascript"></script>
+    <link href="../css/AllStyle.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
     <div id="AllWebTitle">3C家電</div>
@@ -29,8 +33,5 @@
                 <a href=""><img src="../image/icons/search.png" alt="搜尋"/></a>
         </div>
     </div>
-    <script src="../js/CEProd.js"></script>
-    <script src="../js/PopUp.js"></script>
-    <script src="../js/AllJs.js"></script>
 </body>
 </html>

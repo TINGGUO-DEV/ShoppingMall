@@ -6,8 +6,11 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>帳號管理</title>
-    <link rel="stylesheet" href="../css/BSAllStyle.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="../js/BSAllJs.js" type="text/javascript"></script>
+    <script src="../js/BSAcc.js" type="text/javascript"></script>
+    <link href="../css/BSAllStyle.css" rel="stylesheet" type="text/css"/>
+    
 </head>
 <body>
     <div id="BSWeb">  
@@ -19,21 +22,18 @@
                 <a href="BSOrder.aspx">訂單</a>
             </div>
         </div>
-            <div id="BSRightSpace">
-                <div id="BSRightSpaceTitle">帳號管理</div>
-                <div class="BSRightSpaceIcons">
-                    <input type="text"id="" placeholder="尋找"/>
-                    <div class="BSRightSpaceIcons img" onclick="">
-                        <img src="../image/icons/search.png" alt="搜尋"/>
-                    </div>
-                </div>
-                <div class="BSRightSpaceFrame">         <!-- 右邊內部框的容器-->
-
+        <div id="BSRightSpace">
+            <div id="BSRightSpaceTitle">帳號管理</div>
+            <div class="BSRightSpaceIcons">
+                <input type="text"id="" placeholder="尋找"/>
+                <div class="BSRightSpaceIcons img" onclick="">
+                    <img src="../image/icons/search.png" alt="搜尋"/>
                 </div>
             </div>
+            <div class="BSRightSpaceFrame">         <!-- 右邊內部框的容器-->
+
+            </div>
+        </div>
     </div>
-    <script src="../bs_js/BSLogin.js"></script>
-    <script src="../bs_js/BSPopUp.js"></script>
-    <script src="../bs_js/BSAllJs.js"></script>
 </body>
 </html>

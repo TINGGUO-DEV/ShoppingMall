@@ -8,7 +8,7 @@ public partial class member : BasePage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        //CheckAjaxRequest();
+        CheckAjaxRequest();
 
         string method = Request.Form["method"]; //不需去除空白
         method = "register";
@@ -37,11 +37,11 @@ public partial class member : BasePage
         int phone = 0;
         int.TryParse(Request.Form["phone"], out phone);
 
-        acc = "sasaki01";
+        /*acc = "sasaki01";
         pwd = "asdf";
         pwdSec = "asdf";
         mail = "asdf@gmial.com";
-        phone = 0971222333;
+        phone = 0971222333;*/
 
         //驗證帳號
         if (string.IsNullOrEmpty(acc) || new Regex("[a-zA-Z\\d]{8,20}").IsMatch(acc) == false)
@@ -102,7 +102,7 @@ public partial class member : BasePage
             }
         }
 
-        Response.Write("{'status': " + result + "}");
+        Response.Write("{\"status\": " + result + "}");
     }
 
     /// <summary>

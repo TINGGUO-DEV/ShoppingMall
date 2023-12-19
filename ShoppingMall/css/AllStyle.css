@@ -1,4 +1,4 @@
-﻿#AllWebTitle {
+﻿#labAllWebTitle {
     font-size: 40px;
     margin-top: 40px;
     margin-bottom: 20px;
@@ -6,14 +6,14 @@
     color: #888888;
 }
 
-#AllSubTitle {                                   /*頁尾*/
+#labAllfooter {                                   /*頁尾*/
     font-size: 20px;
     margin: 20px;
     text-align: center;
     color: #888888;
 }
 
-#AllSubmission {                                 /*提交按鈕*/
+#btnAllSub {                                 /*提交按鈕*/
     width: 130px;
     height: 45px;
     font-size: 20px;
@@ -27,11 +27,11 @@
     text-align:center;
 }
 
-    #AllSubmission:hover {
+    #btnAllSub:hover {
         background-color: red;
     }
 
-#AllSubmissionCancel {
+#btnAllSubCancel {
     width: 130px;
     height: 45px;
     font-size: 20px;
@@ -45,22 +45,22 @@
     margin-left: 10px;
 }
 
-    #AllSubmissionCancel:hover {
+    #btnAllSubCancel:hover {
         background-color: red;
     }
 
-.AllLinkBtn {
+.btnAllLink {
     text-align: center;
     cursor: pointer;
     margin: 30px;
 }
-    .AllLinkBtn a {
+    .btnAllLink a {
         margin-left: 20px;
         color: inherit;
         cursor: pointer;
     }
 
-    .AllLinkBtn a:hover {
+    .btnAllLink a:hover {
         color: #00FFFF;
     }
 
@@ -74,26 +74,18 @@
 }
 
     .AllInputBox {                            /*包在輸入框外的框*/
-        width: 450px;
+        width: 550px;
         text-align: left;
         margin:50px;
         margin-left:10%;
     }
 
         .AllInputBox input {                 /*輸入框*/
-            border: 1px solid #34c2ff;
+            border: 2px solid #34c2ff;
             height: 30px;
             width: 300px;
             margin-bottom: 20px;
         }
-
-            .AllInputBox input:valid {
-                border: 2px solid green;
-            }
-
-            .AllInputBox input:invalid:not(:placeholder-shown) {
-                border: 2px solid red;
-            }
 
         .AllInputBox a {
             margin-left: 20px;
@@ -110,7 +102,7 @@
             height: auto;
             filter: invert(1);  /* 暫時先用，之後要換成別的用法，目前只能在深色模式下變白色，淺色模式也會變白色，改成用svg檔，並用@madia 修改icon顏色*/
         }
-.AllLittleBtn {
+.btnAllSml {
     width: 60px;
     height: 30px;
     font-size: 15px;
@@ -124,7 +116,7 @@
     text-align: center;
 }
 
-    .AllLittleBtn:hover {
+    .btnAllSml:hover {
         background-color: red;
         border-radius: 3px;
     }
@@ -190,7 +182,7 @@
                     top: 35px; /* 距離 NvaIconsUser 底部的距離 */
                     right: 35px;
                 }
-                    .NvaIconsPopUp button {
+                    .btnNvaIconsPopUp button {
                         width: auto;
                         height: 50%;
                         margin: auto;
@@ -202,7 +194,7 @@
                         display: block;
                     }
 
-                        .NvaIconsPopUp button:hover {
+                        .btnNvaIconsPopUp button:hover {
                             color: #00FFFF;
                         }
 
@@ -236,13 +228,13 @@
         margin-left: 12%;
     }
 
-            .MbrNavBars {
+            .btnMbrNavs {
                 margin-top: 40px;
                 display: flex;
                 flex-direction: column;
                 align-items: center; 
             }
-                .MbrNavBars p {
+                .btnMbrNav p {
                     display: flex;
                     align-items: center;
                     margin: 20px;
@@ -251,7 +243,7 @@
                     border-bottom: 2px solid #BEBEBE;
                 }
 
-                .MbrNavBars a {
+                .btnMbrNav a {
                     font-size: 20px;
                     text-decoration: none;
                     color: white;
@@ -259,6 +251,6 @@
                     cursor: pointer;
                 }
 
-                    .MbrNavBars a:hover {
+                    .btnMbrNav a:hover {
                         color: #00FFFF;
                     }

@@ -6,8 +6,10 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>重設密碼</title>
-    <link rel="stylesheet" href="../css/AllStyle.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="../js/AllJs.js" type="text/javascript"></script>
+    <script src="../js/ForgotResetPwd.js" type="text/javascript"></script>
+    <link href="../css/AllStyle.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
     <div id="AllWebTitle">重設密碼</div>
@@ -38,8 +40,5 @@
                 <div><input value="發送驗證碼" id="AllSubmission" onclick="Sumbtion()"/></div>
             </div>
         </div>
-        <script src="../js/ForgotResetPwd.js"></script>
-        <script src="../js/PopUp.js"></script>
-        <script src="../js/AllJs.js"></script>
 </body>
 </html>
