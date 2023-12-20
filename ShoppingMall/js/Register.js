@@ -1,31 +1,18 @@
 ﻿
-
-function Check2Pwd() {
-    let Pwd1 = document.getElementById("Pwd1");
-    let Pwd2 = document.getElementById("Pwd2");
-
-    if (Pwd1.checkValidity() && Pwd1.value === Pwd2.value) {
-        Pwd2.setCustomValidity('');
-        Pwd2.style.border = '2px solid green';
-    } else {
-        Pwd2.setCustomValidity('密碼不吻合');
-        Pwd2.style.border = '2px solid red';
-    }
-}
-function AccInput(Acc) {
-    Acc.value = Acc.value.replace(/[^a-zA-Z\d]/g, '');
+function AccInput(acc) {
+    acc.value = acc.value.replace(/[^a-zA-Z\d]/g, '');
 }
 
-function PwdIdInput(PwdId) {
-    PwdId.value = PwdId.value.replace(/[^a-zA-Z\d]/g, '');
+function PwdInput(pwdId) {
+    pwdId.value = pwdId.value.replace(/[^a-zA-Z\d]/g, '');
 }
 
-function PhoneInput(Phone) {
-    Phone.value =Phone.value.replace(/^[^0]|[^\d]/g, '');
+function PhoneInput(phone) {
+    phone.value =phone.value.replace(/^[^0]|[^\d]/g, '');
 }
 
-function MailInput(Mail) {
-    Mail.value = Mail.value.replace(/^[^a-zA-Z\d]|[^a-zA-Z\d@.-]/g, '');
+function MailInput(mail) {
+    mail.value = mail.value.replace(/^[^a-zA-Z\d]|[^a-zA-Z\d@.-]/g, '');
 }
 
 function AccBlur(e) {
@@ -54,13 +41,29 @@ function Pwd2Blur(e) {
     var target = e.currentTarget;
     var value = target.value;
 
+    console.log(value.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,20}$/));
+
     if (value.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,20}$/) == null) {
         target.style.borderColor = "red";
+
     } else {
         target.style.borderColor = "green";
     }
 
     Check2Pwd();
+}
+
+function Check2Pwd() {
+    let pwd1 = document.getElementById("pwd1");
+    let pwd2 = document.getElementById("pwd2");
+
+    let Pwd1Valid = pwd1.value.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,20}$/) !== null;
+
+    if (Pwd1Valid && pwd1.value === pwd2.value) {
+        pwd2.style.border = '2px solid green';
+    } else {
+        pwd2.style.border = '2px solid red';
+    }
 }
 
 function MailBlur(e) {
@@ -86,11 +89,11 @@ function PhoneBlur(e) {
 }
 
 function Sumbtion() {
-    var acc = $('#Acc').val();
-    var pwd = $('#Pwd1').val();
-    var pwdSec = $('#Pwd2').val();
-    var mail = $('#Mail').val();
-    var phone = $('#Phone').val();
+    var acc = $('#acc').val();
+    var pwd = $('#pwd1').val();
+    var pwdSec = $('#pwd2').val();
+    var mail = $('#mail').val();
+    var phone = $('#phone').val();
 
     if (acc.match(/(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{1,20}$/) == null) {
         alert('請確認您輸入的帳號至少包含1個英文字母及1個數字');
@@ -136,7 +139,7 @@ function Sumbtion() {
 
             } else if (data.status & 1 == 1) {
                 alert("帳號不符合規則");
-                $('#Acc').val('');
+                $('#acc').val('');
 
             } else if (data.status & 2 == 2) {
                 alert("密碼不相同");
@@ -144,11 +147,11 @@ function Sumbtion() {
 
             } else if (data.status & 4 == 4) {
                 alert("信箱格式錯誤");
-                $('#Mail').val('');
+                $('#mail').val('');
 
             } else if (data.status === 8) {
                 alert("手機格式錯誤");
-                $('#Phone').val('');
+                $('#phone').val('');
 
             } else if (data.status === 1024) {
                 alert("註冊成功");
@@ -157,28 +160,33 @@ function Sumbtion() {
         },
 
         error: function (xhr, status, error) {
-            alert("註冊失敗，請稍後重試或聯繫客服");
+
+            console.log("Status: " + status);
+            console.log("Error: " + error);
+            console.log(xhr);
+            alert("登入失敗，請稍後重試或聯繫客服");
+
         }
     });
 };
 
 /* 正確的測試帳密
 
-$('#Acc').val('a12');
-$('#Pwd1').val('a123546A');
-$('#Pwd2').val('a123546A');
-$('#Mail').val('12@21.com');
-$('#Phone').val('0912345678');
+$('#acc').val('a12');
+$('#pwd1').val('a123546A');
+$('#pwd2').val('a123546A');
+$('#mail').val('12@21.com');
+$('#phone').val('0912345678');
 
 */
 
 /*不正確的測試帳密
 
-$('#Acc').val('a');
-$('#Pwd1').val('a1235A');
-$('#Pwd2').val('a12345A');
-$('#Mail').val('12');
-$('#Phone').val('0718345678');
+$('#acc').val('a');
+$('#pwd1').val('a1235A');
+$('#pwd2').val('a12345A');
+$('#mail').val('12');
+$('#phone').val('0718345678');
 
  */
 

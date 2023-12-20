@@ -11,7 +11,7 @@ namespace ShoppingMall.aspx
 {
 
 
-    public partial class ForgotResetPwd
+    public partial class BSUser
     {
     }
 }

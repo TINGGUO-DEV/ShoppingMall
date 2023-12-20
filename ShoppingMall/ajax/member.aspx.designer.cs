@@ -9,6 +9,6 @@
 
 
 
-public partial class member
+public partial class Member
 {
 }

@@ -7,11 +7,11 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace ShoppingMall.Backstage
+namespace ShoppingMall.aspx
 {
 
 
-    public partial class BSMember
+    public partial class ResetPwd
     {
     }
 }

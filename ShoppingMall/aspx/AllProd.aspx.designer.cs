@@ -11,7 +11,7 @@ namespace ShoppingMall.aspx
 {
 
 
-    public partial class AllProducts
+    public partial class AllProd
     {
     }
 }

@@ -1,16 +1,15 @@
-﻿<%@ Page Language = "C#" AutoEventWireup = "true" CodeBehind = "BSAcc.aspx.cs" Inherits = "ShoppingMall.aspx.BSAcc" %>
+﻿<%@ Page Language = "C#" AutoEventWireup = "true" CodeBehind = "BSUser.aspx.cs" Inherits = "ShoppingMall.aspx.BSUser" %>
 
 <!DOCTYPE html>
 
 <html xmlns = "http://www.w3.org/1999/xhtml">
 <head runat = "server">
 <meta http-equiv = "Content-Type" content = "text/html; charset = utf-8"/>
-    <title>帳號管理</title>
-    <script src = "https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <title>會員管理</title>
+    <script src = "https://code.jquery.com/jquery-3.4.1.js" integrity = "sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin = "anonymous"></script>
     <script src = "../js/BSAllJs.js" type = "text/javascript"></script>
-    <script src = "../js/BSAcc.js" type = "text/javascript"></script>
+    <script src = "../js/BSMember.js" type = "text/javascript"></script>
     <link href = "../css/BSAllStyle.css" rel = "stylesheet" type = "text/css"/>
-    
 </head>
 <body>
     <div id = "bSWeb">  
@@ -23,7 +22,7 @@
             </div>
         </div>
         <div id = "bSRightSpace">
-            <div id = "labBSRightSpaceTitle">帳號管理</div>
+            <div id = "labBSRightSpaceTitle">會員管理</div>
             <div class = "bSRightSpaceIcons">
                 <input type = "text"id = "" placeholder = "尋找"/>
                 <div class = "bSRightSpaceIcons img" onclick = "">

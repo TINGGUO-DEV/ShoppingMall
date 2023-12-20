@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 using System.Net.Mail;
 using System.Text.RegularExpressions;
 
-public partial class member : BasePage
+public partial class Member : BasePage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -44,7 +44,7 @@ public partial class member : BasePage
         phone = 0971222333;*/
 
         //驗證帳號
-        if (string.IsNullOrEmpty(acc) || new Regex("[a-zA-Z\\d]{8,20}").IsMatch(acc) == false)
+        if (string.IsNullOrEmpty(acc) || new Regex("[a-zA-Z\\d]{2,20}").IsMatch(acc) == false)
         {
             result += 1;
         }

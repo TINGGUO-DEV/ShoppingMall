@@ -90,21 +90,20 @@
   <ItemGroup>
     <Content Include="ajax\Member.aspx" />
     <Content Include="aspx\AllProd.aspx" />
+    <Content Include="aspx\BSUser.aspx" />
     <Content Include="aspx\CEProd.aspx" />
     <Content Include="aspx\ChangePwd.aspx" />
     <Content Include="aspx\FavProd.aspx" />
-    <Content Include="aspx\ForgotResetPwd.aspx" />
     <Content Include="aspx\Home.aspx" />
     <Content Include="aspx\Login.aspx" />
-    <Content Include="aspx\Member.aspx" />
     <Content Include="aspx\Order.aspx" />
     <Content Include="aspx\Register.aspx" />
+    <Content Include="aspx\User.aspx" />
     <Content Include="aspx\VerifyCode.aspx" />
-    <Content Include="aspx\ForgotPwd.aspx" />
+    <Content Include="aspx\ResetPwd.aspx" />
     <Content Include="aspx\ShopCash.aspx" />
     <Content Include="aspx\BSAcc.aspx" />
     <Content Include="aspx\BSLogin.aspx" />
-    <Content Include="aspx\BSMember.aspx" />
     <Content Include="aspx\BSOrder.aspx" />
     <Content Include="aspx\BSProd.aspx" />
     <Content Include="js\BSAllJs.js" />
@@ -124,15 +123,14 @@
     <Content Include="js\AllJs.js" />
     <Content Include="js\AllProd.js" />
     <Content Include="js\BSAcc.js" />
-    <Content Include="js\BSMember.js" />
+    <Content Include="js\BSUser.js" />
     <Content Include="js\BSOrder.js" />
     <Content Include="js\BSProd.js" />
     <Content Include="js\CEProd.js" />
     <Content Include="js\ChangePwd.js" />
     <Content Include="js\FavProd.js" />
-    <Content Include="js\ForgotResetPwd.js" />
     <Content Include="js\Login.js" />
-    <Content Include="js\Member.js" />
+    <Content Include="js\User.js" />
     <Content Include="js\Order.js" />
     <Content Include="js\Register.js" />
     <Content Include="js\VerifyCode.js" />
@@ -158,6 +156,13 @@
     <Compile Include="aspx\AllProd.aspx.designer.cs">
       <DependentUpon>AllProd.aspx</DependentUpon>
     </Compile>
+    <Compile Include="aspx\BSUser.aspx.cs">
+      <DependentUpon>BSUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aspx\BSUser.aspx.designer.cs">
+      <DependentUpon>BSUser.aspx</DependentUpon>
+    </Compile>
     <Compile Include="aspx\CEProd.aspx.cs">
       <DependentUpon>CEProd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -179,13 +184,6 @@
     <Compile Include="aspx\FavProd.aspx.designer.cs">
       <DependentUpon>FavProd.aspx</DependentUpon>
     </Compile>
-    <Compile Include="aspx\ForgotResetPwd.aspx.cs">
-      <DependentUpon>ForgotResetPwd.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="aspx\ForgotResetPwd.aspx.designer.cs">
-      <DependentUpon>ForgotResetPwd.aspx</DependentUpon>
-    </Compile>
     <Compile Include="aspx\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -199,13 +197,6 @@
     </Compile>
     <Compile Include="aspx\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="aspx\Member.aspx.cs">
-      <DependentUpon>Member.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="aspx\Member.aspx.designer.cs">
-      <DependentUpon>Member.aspx</DependentUpon>
     </Compile>
     <Compile Include="aspx\Order.aspx.cs">
       <DependentUpon>Order.aspx</DependentUpon>
@@ -221,6 +212,13 @@
     <Compile Include="aspx\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="aspx\User.aspx.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aspx\User.aspx.designer.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+    </Compile>
     <Compile Include="aspx\VerifyCode.aspx.cs">
       <DependentUpon>VerifyCode.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -228,12 +226,12 @@
     <Compile Include="aspx\VerifyCode.aspx.designer.cs">
       <DependentUpon>VerifyCode.aspx</DependentUpon>
     </Compile>
-    <Compile Include="aspx\ForgotPwd.aspx.cs">
-      <DependentUpon>ForgotPwd.aspx</DependentUpon>
+    <Compile Include="aspx\ResetPwd.aspx.cs">
+      <DependentUpon>ResetPwd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="aspx\ForgotPwd.aspx.designer.cs">
-      <DependentUpon>ForgotPwd.aspx</DependentUpon>
+    <Compile Include="aspx\ResetPwd.aspx.designer.cs">
+      <DependentUpon>ResetPwd.aspx</DependentUpon>
     </Compile>
     <Compile Include="aspx\ShopCash.aspx.cs">
       <DependentUpon>ShopCash.aspx</DependentUpon>
@@ -255,13 +253,6 @@
     </Compile>
     <Compile Include="aspx\BSLogin.aspx.designer.cs">
       <DependentUpon>BSLogin.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="aspx\BSMember.aspx.cs">
-      <DependentUpon>BSMember.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="aspx\BSMember.aspx.designer.cs">
-      <DependentUpon>BSMember.aspx</DependentUpon>
     </Compile>
     <Compile Include="aspx\BSOrder.aspx.cs">
       <DependentUpon>BSOrder.aspx</DependentUpon>

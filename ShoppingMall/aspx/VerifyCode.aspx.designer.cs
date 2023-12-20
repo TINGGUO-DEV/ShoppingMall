@@ -11,7 +11,7 @@ namespace ShoppingMall.aspx
 {
 
 
-    public partial class ResetPwd
+    public partial class VerifyCode
     {
     }
 }

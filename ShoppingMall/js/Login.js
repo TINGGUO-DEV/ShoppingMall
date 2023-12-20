@@ -1,16 +1,16 @@
-﻿function AccInput(Acc) {
-    Acc.value = Acc.value.replace(/[^a-zA-Z\d]/g, '');
+﻿function AccInput(acc) {
+    acc.value = acc.value.replace(/[^a-zA-Z\d]/g, '');
 }
 
-function PwdLogInput(PwdLog) {
-    PwdLog.value = PwdLog.value.replace(/[^a-zA-Z\d]/g, '');
+function PwdLogInput(pwdLog) {
+    pwdLog.value = pwdLog.value.replace(/[^a-zA-Z\d]/g, '');
 }
 
 function AccBlur(e) {
     var target = e.currentTarget;
     var value = target.value;
 
-    if (value.match(/(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{1,20}$/) == null) {
+    if (value.match(/(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{1, 20}$/) == null) {
         target.style.borderColor = "red";
     } else {
         target.style.borderColor = "green";
@@ -21,7 +21,7 @@ function PwdLogBlur(e) {
     var target = e.currentTarget;
     var value = target.value;
 
-    if (value.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,20}$/) == null) {
+    if (value.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6, 20}$/) == null) {
         target.style.borderColor = "red";
     } else {
         target.style.borderColor = "green";

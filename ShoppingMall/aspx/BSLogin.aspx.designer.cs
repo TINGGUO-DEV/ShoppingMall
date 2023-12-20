@@ -7,7 +7,7 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace ShoppingMall.backstage_aspx
+namespace ShoppingMall.aspx
 {
 
 

@@ -1,5 +1,5 @@
-﻿function filterInput(Input) {
-    Input.value = Input.value.replace(/[^a-zA-Z0-9]/g, '');
+﻿function filterInput(input) {
+    input.value = input.value.replace(/[^a-zA-Z0-9]/g, '');
 }
 
 function Sumbtion() {
