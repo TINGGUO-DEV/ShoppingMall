@@ -21,19 +21,11 @@
                 <a href = "">化妝品</a>
                 <a href = "">喜好商品</a>
             </div>
-<<<<<<< HEAD
             <div class = "nvaIcons">
                 <div class = "nvaIconsUser" onmouseover = "OpenPopUp('popUp')" onmouseout = "ClosePopUp('popUp')">
                     <a href = "Login.aspx"><img src = "../image/icons/user.png" alt = "會員"/></a>
                         <div class = "nvaIconsPopUp" id = "popUp">
                             <button onclick = "window.location.href = 'User.aspx'">會員中心</button>
-=======
-            <div class="NvaIcons">
-                <div class="NvaIconsUser" onmouseover="OpenPopUp('PopUpUser')" onmouseout="ClosePopUp('PopUpUser')">
-                    <a href="Login.aspx"><img src="../image/icons/user.png" alt="會員"/></a>
-                        <div class="NvaIconsPopUp" id="PopUpUser">
-                            <button onclick="window.location.href='User.aspx'">會員中心</button>
->>>>>>> ae884e027a25a74c1de58b0dd14a6d02f1b91941
                             <button>登出</button>
                         </div>
                 </div>

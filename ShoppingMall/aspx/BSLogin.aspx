@@ -14,26 +14,15 @@
 </head>
 <body>
     <div id = "labBSLoginTitle">ShoppingMall 後台管理</div>
-<<<<<<< HEAD
     <div id = "bSLoginContainer">
-=======
-    <div id = "BSLoginContainer">
->>>>>>> ae884e027a25a74c1de58b0dd14a6d02f1b91941
         <div class = "txbBSLoginInputBox">
             <p><span>帳號：</span>
             <input type = "text" placeholder = "應包含至少1個英文字母及1個數字" oninput = "filterInput(this)" title = "填寫時請注意大小寫是否正確" maxlength = "20"/></p>
             <p><span>密碼：</span>
-<<<<<<< HEAD
             <input type = "password" id = "pwdBSLog" placeholder = "由大小寫英文及數字組成的6-20個混和字符" oninput = "filterInput(this) " title = "填寫時請注意大小寫是否正確" maxlength="20"/>
             <img class = "togCursor" src = "../image/icons/eye-close.png" alt = "Hide Password" onclick = "PasswordEye(this)"/></p>
         </div>
         <div class = "bSAllSubContainer">
-=======
-            <input type = "password" id = "PwdBSLog" placeholder = "由大小寫英文及數字組成的6-20個混和字符" oninput = "filterInput(this) " title = "填寫時請注意大小寫是否正確" maxlength="20"/>
-            <img id = "eyeIconBSLog" class = "TogCursor" src = "../image/icons/eye-close.png" alt = "Hide Password" onclick = "PasswordEye('PwdBSLog', 'eyeIconBSLog')" /></p>
-        </div>
-        <div class = "BSAllSubContainer">
->>>>>>> ae884e027a25a74c1de58b0dd14a6d02f1b91941
             <input value = "登入" class = "btnBSAllSub1" onclick = "Sumbtion()"/>
             <a href = "Home.aspx"class = "btnBSAllSub2"><span>前往官網</span></a>
         </div> 

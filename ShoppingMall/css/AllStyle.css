@@ -66,11 +66,7 @@
 
     
     
-<<<<<<< HEAD
 #allContainer {                       /*AllContainer*/
-=======
-#AllContainer {                       /*AllContainer*/
->>>>>>> ae884e027a25a74c1de58b0dd14a6d02f1b91941
     display: flex;
     justify-content: center;
     text-align: center;
@@ -91,21 +87,13 @@
             margin-bottom: 20px;
         }
 
-<<<<<<< HEAD
         .txbAllInputBox a {                     /*AllInputBox a*/
-=======
-        .btnAllInputBox a {                     /*AllInputBox a*/
->>>>>>> ae884e027a25a74c1de58b0dd14a6d02f1b91941
             margin-left: 20px;
             color: inherit;
             cursor: pointer;
         }
 
-<<<<<<< HEAD
             .txbAllInputBox a:hover {           /*AllInputBox a:hover*/
-=======
-            .btnAllInputBox a:hover {           /*AllInputBox a:hover*/
->>>>>>> ae884e027a25a74c1de58b0dd14a6d02f1b91941
                 color: #00FFFF;
             }
 
@@ -191,11 +179,7 @@
                     top: 35px; /* 距離 NvaIconsUser 底部的距離 */
                     right: 35px;
                 }
-<<<<<<< HEAD
                     .nvaIconsPopUp button {    /*NvaIconsPopUp button*/
-=======
-                    .NvaIconsPopUp button {    /*NvaIconsPopUp button*/
->>>>>>> ae884e027a25a74c1de58b0dd14a6d02f1b91941
                         width: auto;
                         height: 50%;
                         margin: auto;
@@ -207,20 +191,12 @@
                         display: block;
                     }
 
-<<<<<<< HEAD
                         .nvaIconsPopUp button:hover {      /*NvaIconsPopUp button:hover*/
-=======
-                        .NvaIconsPopUp button:hover {      /*NvaIconsPopUp button:hover*/
->>>>>>> ae884e027a25a74c1de58b0dd14a6d02f1b91941
                             color: #00FFFF;
                         }
 
 
-<<<<<<< HEAD
 #mbrContainer {  /*Mbr 會員中心*/
-=======
-#MbrContainer {  /*Mbr 會員中心*/
->>>>>>> ae884e027a25a74c1de58b0dd14a6d02f1b91941
     display: flex;
 }
 

@@ -6,22 +6,14 @@
 <head runat = "server">
 <meta http-equiv = "Content-Type" content = "text/html; charset = utf-8"/>
     <title>3C家電</title>
-<<<<<<< HEAD
     <script src = "https://code.jquery.com/jquery-3.4.1.js" integrity = "sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin = "anonymous"></script>
-=======
-    <script src = "https://code.jquery.com/jquery-3.4.1.js" integrity = "sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU = " crossorigin = "anonymous"></script>
->>>>>>> ae884e027a25a74c1de58b0dd14a6d02f1b91941
     <script src = "../js/AllJs.js" type = "text/javascript"></script>
     <script src = "../js/CEProd.js" type = "text/javascript"></script>
     <link href = "../css/AllStyle.css" rel = "stylesheet" type = "text/css"/>
 </head>
 <body>
     <div id = "labAllWebTitle">3C家電</div>
-<<<<<<< HEAD
     <div  id = "navContainer">
-=======
-    <div  id = "NavContainer">
->>>>>>> ae884e027a25a74c1de58b0dd14a6d02f1b91941
         <div class = "btnNavs">
             <a href = "Home.aspx">首頁</a>
             <a href = "">所有商品</a>
@@ -29,17 +21,10 @@
             <a href = "">化妝品</a>
             <a href = "">喜好商品</a>
         </div>
-<<<<<<< HEAD
         <div class = "nvaIcons">
             <div class = "nvaIconsUser" onmouseover = "OpenPopUp('popUp')" onmouseout = "ClosePopUp('popUp')">
                 <a href = "Login.aspx"><img src = "../image/icons/user.png" alt = "會員"/></a>
                     <div class = "nvaIconsPopUp" id = "popUp">
-=======
-        <div class = "NvaIcons">
-            <div class = "NvaIconsUser" onmouseover = "OpenPopUp('PopUpUser')" onmouseout = "ClosePopUp('PopUpUser')">
-                <a href = "Login.aspx"><img src = "../image/icons/user.png" alt = "會員"/></a>
-                    <div class = "NvaIconsPopUp" id = "PopUpUser">
->>>>>>> ae884e027a25a74c1de58b0dd14a6d02f1b91941
                         <button onclick = "window.location.href = 'User.aspx'">會員中心</button>
                         <button>登出</button>
                     </div>
