@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace ShoppingMall.Backstage
+namespace ShoppingMall.aspx
 {
-    public partial class BackstageHome : System.Web.UI.Page
+    public partial class BSAcc : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Favorite.aspx.cs" Inherits="ShoppingMall.aspx.Favorite" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="FavProd.aspx.cs" Inherits="ShoppingMall.aspx.FavProd" %>
 
 <!DOCTYPE html>
 
@@ -12,9 +12,9 @@
     <link href="../css/AllStyle.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-    <div id="AllWebTitle">喜好商品</div>
+    <div id="labAllWebTitle">喜好商品</div>
         <div  id="NavContainer">
-            <div class="NavBars">
+            <div class="btnNavs">
                 <a href="Home.aspx">首頁</a>
                 <a href="">所有商品</a>
                 <a href="" >3C家電</a>
@@ -23,9 +23,9 @@
             </div>
             <div class="NvaIcons">
                 <div class="NvaIconsUser" onmouseover="OpenPopUp('PopUpUser')" onmouseout="ClosePopUp('PopUpUser')">
-                    <a href="Login.aspx"><img src="../image/icons/user.png" alt="註冊會員"/></a>
+                    <a href="Login.aspx"><img src="../image/icons/user.png" alt="會員"/></a>
                         <div class="NvaIconsPopUp" id="PopUpUser">
-                            <button onclick="window.location.href='Member.aspx'">會員中心</button>
+                            <button onclick="window.location.href='User.aspx'">會員中心</button>
                             <button>登出</button>
                         </div>
                 </div>

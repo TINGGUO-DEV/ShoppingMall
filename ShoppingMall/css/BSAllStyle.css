@@ -2,7 +2,7 @@
     display:flex;
 }
 
-.BSAllSub1 { /*提交按鈕*/
+.btnBSAllSub1 { /*BSAllSub1 提交按鈕*/
     width: 130px;
     height: 45px;
     font-size: 20px;
@@ -16,11 +16,11 @@
     text-align: center;
 }
 
-    .BSAllSub1:hover {
-        background-color: red;
-    }
+.btnBSAllSub1:hover { /*BSAllSub1:hover*/
+    background-color: red;
+}
 
-.BSAllSub2 {
+.btnBSAllSub2 { /*BSAllSub2*/
     width: 130px;
     height: 45px;
     font-size: 20px;
@@ -36,11 +36,11 @@
     color: inherit;
 }
 
-    .BSAllSub2:hover {
+    .btnBSAllSub2:hover { /*BSAllSub2:hover*/
         color: #00FFFF;
     }
 
-.TogCursor{
+.TogCursor {
     cursor: pointer;
 }
 
@@ -53,7 +53,7 @@
     flex: auto;
 }
 
-    #BSRightSpaceTitle {
+    #labBSRightSpaceTitle {
         font-size: 30px;
         flex: auto;
         margin-left: 40%;
@@ -98,25 +98,25 @@
     background-color: #003E3E;
 }
 
-    .BSNavBars {
+    .btnBSNavs {
         margin-top: 80%;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-        .BSNavBars a {
+        .btnBSNavs a {
             font-size: 25px;
             text-decoration: none;
             color: white;
             margin: 20px;
         }
 
-            .BSNavBars a:hover {
+            .btnBSNavs a:hover {
                 color: #00FFFF;
             }
 
-#BSLoginTitle {
+#labBSLoginTitle {
     font-size: 30px;
     flex: auto;
     margin-left: 40%;
@@ -131,28 +131,20 @@
     margin-top: 40px;
 }
 
-    .BSLoginInputBox { /*包在輸入框外的框*/
+    .txbBSLoginInputBox { /*包在輸入框外的框*/
         width: 450px;
         text-align: left;
         margin-top:40px;
 }
 
-        .BSLoginInputBox input { /*輸入框*/
+        .txbBSLoginInputBox input { /*輸入框*/
             border: 1px solid #34c2ff;
             height: 30px;
             width: 300px;
             margin-bottom: 20px;
         }
 
-            .BSLoginInputBox input:valid {
-                border: 2px solid green;
-            }
-
-            .BSLoginInputBox input:invalid:not(:placeholder-shown) {
-                border: 2px solid red;
-            }
-
-        .BSLoginInputBox img {
+        .txbBSLoginInputBox img {
             width: 30px;
             height: auto;
         }

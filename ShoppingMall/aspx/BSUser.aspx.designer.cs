@@ -11,7 +11,7 @@ namespace ShoppingMall.aspx
 {
 
 
-    public partial class BSOrder
+    public partial class BSUser
     {
     }
 }

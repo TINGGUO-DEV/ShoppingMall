@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace ShoppingMall.Backstage
+namespace ShoppingMall.aspx
 {
     public partial class BSOrder : System.Web.UI.Page
     {

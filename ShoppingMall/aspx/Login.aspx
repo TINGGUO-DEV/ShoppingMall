@@ -23,9 +23,9 @@
             </div>
             <div class="NvaIcons">
                 <div class="NvaIconsUser" onmouseover="OpenPopUp('PopUpUser')" onmouseout="ClosePopUp('PopUpUser')">
-                    <a href="Login.aspx"><img src="../image/icons/user.png" alt="註冊會員"/></a>
+                    <a href="Login.aspx"><img src="../image/icons/user.png" alt="會員"/></a>
                         <div class="NvaIconsPopUp" id="PopUpUser">
-                            <button onclick="window.location.href='Member.aspx'">會員中心</button>
+                            <button onclick="window.location.href='User.aspx'">會員中心</button>
                             <button>登出</button>
                         </div>
                 </div>
