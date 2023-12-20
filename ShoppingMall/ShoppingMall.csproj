@@ -96,6 +96,10 @@
     <Content Include="aspx\FavProd.aspx" />
     <Content Include="aspx\Home.aspx" />
     <Content Include="aspx\Login.aspx" />
+<<<<<<< HEAD
+=======
+    <Content Include="aspx\User.aspx" />
+>>>>>>> ae884e027a25a74c1de58b0dd14a6d02f1b91941
     <Content Include="aspx\Order.aspx" />
     <Content Include="aspx\Register.aspx" />
     <Content Include="aspx\User.aspx" />
@@ -104,6 +108,10 @@
     <Content Include="aspx\ShopCash.aspx" />
     <Content Include="aspx\BSAcc.aspx" />
     <Content Include="aspx\BSLogin.aspx" />
+<<<<<<< HEAD
+=======
+    <Content Include="aspx\BSUser.aspx" />
+>>>>>>> ae884e027a25a74c1de58b0dd14a6d02f1b91941
     <Content Include="aspx\BSOrder.aspx" />
     <Content Include="aspx\BSProd.aspx" />
     <Content Include="js\BSAllJs.js" />
@@ -198,6 +206,16 @@
     <Compile Include="aspx\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
+    <Compile Include="aspx\User.aspx.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aspx\User.aspx.designer.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+    </Compile>
+>>>>>>> ae884e027a25a74c1de58b0dd14a6d02f1b91941
     <Compile Include="aspx\Order.aspx.cs">
       <DependentUpon>Order.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -254,6 +272,16 @@
     <Compile Include="aspx\BSLogin.aspx.designer.cs">
       <DependentUpon>BSLogin.aspx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
+    <Compile Include="aspx\BSUser.aspx.cs">
+      <DependentUpon>BSUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aspx\BSUser.aspx.designer.cs">
+      <DependentUpon>BSUser.aspx</DependentUpon>
+    </Compile>
+>>>>>>> ae884e027a25a74c1de58b0dd14a6d02f1b91941
     <Compile Include="aspx\BSOrder.aspx.cs">
       <DependentUpon>BSOrder.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

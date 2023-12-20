@@ -12,6 +12,7 @@
     <link href = "../css/AllStyle.css" rel = "stylesheet" type = "text/css"/>
 </head>
 <body>
+<<<<<<< HEAD
     <div id = "labAllWebTitle">會員中心</div>
     <div  id = "navContainer">
         <div class = "btnNavs">
@@ -26,6 +27,22 @@
                 <a href = "Login.aspx"><img src = "../image/icons/user.png" alt = "會員"/></a>
                     <div class = "nvaIconsPopUp" id = "popUp">
                         <button onclick = "window.location.href = 'User.aspx'">會員中心</button>
+=======
+    <div id="labAllWebTitle">會員中心</div>
+    <div  id="NavContainer">
+        <div class="btnNavs">
+            <a href="Home.aspx">首頁</a>
+            <a href="">所有商品</a>
+            <a href="" >3C家電</a>
+            <a href="">化妝品</a>
+            <a href="">喜好商品</a>
+        </div>
+        <div class="NvaIcons">
+            <div class="NvaIconsUser" onmouseover="OpenPopUp('PopUpUser')" onmouseout="ClosePopUp('PopUpUser')">
+                <a href="Login.aspx"><img src="../image/icons/user.png" alt="會員"/></a>
+                    <div class="NvaIconsPopUp" id="PopUpUser">
+                        <button onclick="window.location.href='User.aspx'">會員中心</button>
+>>>>>>> ae884e027a25a74c1de58b0dd14a6d02f1b91941
                         <button>登出</button>
                     </div>
             </div>
@@ -33,9 +50,15 @@
         <a href = ""><img src = "../image/icons/search.png" alt = "搜尋"/></a>
         </div>
     </div>          
+<<<<<<< HEAD
     <div id = "mbrContainer">
         <div id = "mbrNavContainer">
             <div class = "btnMbrNavs">
+=======
+    <div id="MbrContainer">
+        <div id="MbrNavContainer">
+            <div class="btnMbrNavs">
+>>>>>>> ae884e027a25a74c1de58b0dd14a6d02f1b91941
                 <p>更改密碼</p>
                 <a href = "User.aspx">會員資料</a>
                 <a href = "ChangePwd.aspx">更改密碼</a>
@@ -43,8 +66,13 @@
                 <a href = "ShopCash.aspx">購物金</a>
             </div>
         </div>
+<<<<<<< HEAD
         <div id = "mbrRightSpace">
             <div class = "txbAllInputBox">
+=======
+        <div id="MbrRightSpace">
+            <div class="txbAllInputBox">
+>>>>>>> ae884e027a25a74c1de58b0dd14a6d02f1b91941
                 <div>目前密碼：</div>
                 <div><input type = "password" id = "pwd0"placeholder = "請輸入目前設定的密碼" oninput = "PwdIdInput(this); " maxlength = "20" required />
                 <img class = "togCursor" src = "../image/icons/eye-close.png" alt = "Hide Password" onclick = "PasswordEye(this)"/></div>
@@ -52,9 +80,15 @@
                 <div><input type = "password" id = "pwd1"placeholder = "請輸入由大小寫英文及數字組成的6-20個混和字符" oninput = "PwdIdInput(this); " maxlength = "20" required />
                 <img class = "togCursor" src = "../image/icons/eye-close.png" alt = "Hide Password" onclick = "PasswordEye(this)"/></div>
                 <div>新密碼確認：</div>
+<<<<<<< HEAD
                 <div><input type = "password" id = "pwd2" placeholder = "請再輸入一次密碼" oninput = "PwdIdInput(this)" title = "請確認您輸入的密碼是否與上一列設定的密碼相同" maxlength = "20" required />
                 <img class = "togCursor" src = "../image/icons/eye-close.png" alt = "Hide Password" onclick = "PasswordEye(this)"/></div>
                 <div><input value = "取消" id = "btnAllSubCancel" onclick = "Sumbtion()"/><input value = "確認修改" id = "btnAllSub" onclick = "Sumbtion()"/></div>
+=======
+                <div><input type="password" id="Pwd2" placeholder="請再輸入一次密碼" oninput="PwdIdInput(this); Check2Pwd();" title="請確認您輸入的密碼是否與上一列設定的密碼相同" maxlength="20" required />
+                <img id="eyeIcon2" class="TogCursor" src="../image/icons/eye-close.png" alt="Hide Password" onclick="PasswordEye('Pwd2', 'eyeIcon2')" /></div>
+                <div><input value="取消" id="btnAllSubCancel" onclick="Sumbtion()"/><input value="確認修改" id="btnAllSub" onclick="Sumbtion()"/></div>
+>>>>>>> ae884e027a25a74c1de58b0dd14a6d02f1b91941
              </div>   
         </div>   
     </div>

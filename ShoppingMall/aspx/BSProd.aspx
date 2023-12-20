@@ -12,8 +12,13 @@
     <link href = "../css/BSAllStyle.css" rel = "stylesheet" type = "text/css"/>
 </head>
 <body>
+<<<<<<< HEAD
     <div id = "bSWeb">  
     <div id = "bSNavContainer">
+=======
+    <div id = "BSWeb">  
+    <div id = "BSNavContainer">
+>>>>>>> ae884e027a25a74c1de58b0dd14a6d02f1b91941
         <div class = "btnBSNavs">
             <a href = "BSAcc.aspx">帳號</a>
             <a href = "BSUser.aspx">會員</a>
@@ -21,6 +26,7 @@
             <a href = "BSOrder.aspx">訂單</a>
         </div>
     </div>
+<<<<<<< HEAD
     <div id = "bSRightSpace">
             <div id = "labBSRightSpaceTitle">商品管理</div>
             <div class = "bSRightSpaceIcons">
@@ -30,6 +36,17 @@
                 </div>
             </div>
             <div class = "bSRightSpaceFrame">         <!-- 右邊內部框的容器-->
+=======
+    <div id = "BSRightSpace">
+            <div id = "labBSRightSpaceTitle">商品管理</div>
+            <div class = "BSRightSpaceIcons">
+                <input type = "text"id="" placeholder = "尋找"/>
+                <div class = "BSRightSpaceIcons img" onclick = "">
+                    <img src = "../image/icons/search.png" alt = "搜尋"/>
+                </div>
+            </div>
+            <div class = "BSRightSpaceFrame">         <!-- 右邊內部框的容器-->
+>>>>>>> ae884e027a25a74c1de58b0dd14a6d02f1b91941
 
             </div>
         </div>
