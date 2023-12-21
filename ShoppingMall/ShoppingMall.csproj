@@ -134,7 +134,7 @@
     <Content Include="js\Order.js" />
     <Content Include="js\Register.js" />
     <Content Include="js\VerifyCode.js" />
-    <Content Include="js\ForgotPwd.js" />
+    <Content Include="js\ResetPwd.js" />
     <Content Include="js\ShopCash.js" />
     <Content Include="Web.config" />
   </ItemGroup>

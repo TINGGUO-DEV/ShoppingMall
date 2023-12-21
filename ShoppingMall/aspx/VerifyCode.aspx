@@ -22,9 +22,9 @@
             <a href = "">喜好商品</a>
         </div>
         <div class = "nvaIcons">
-            <div class = "nvaIconsUser" onmouseover = "OpenPopUp('popUp')" onmouseout = "ClosePopUp('popUp')">
+            <div class = "popUps" onmouseover = "OpenPopUp('popUpIcon')" onmouseout = "ClosePopUp('popUpIcon')">
                 <a href = "Login.aspx"><img src = "../image/icons/user.png" alt = "會員"/></a>
-                    <div class = "nvaIconsPopUp" id = "popUp">
+                    <div class = "popUpIcons" id = "popUpIcon">
                         <button onclick = "window.location.href = 'User.aspx'">會員中心</button>
                         <button>登出</button>
                     </div>
@@ -36,7 +36,7 @@
     <div id =  "allContainer">
         <div class = "txbAllInputBox">
             <p>請輸入信箱收到的六位數驗證碼：</p>
-            <p><input type = "email"id = "Mail" placeholder = "ex.1231456" oninput = "NumInput(this)" maxlength = "50" required /></p>
+            <p><input type = "email"id = "vfyCode" placeholder = "ex.123456" oninput = "NumInput(this)" onblur = "NumBlur(event)" maxlength = "6"/></p>
             <div><input value = "確認" id = "btnAllSub" onclick = "Sumbtion()" />
                 <a href = "ResetPwd.aspx">重新發送驗證碼</a>
             </div>     

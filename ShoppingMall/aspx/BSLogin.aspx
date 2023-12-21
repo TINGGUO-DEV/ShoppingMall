@@ -17,10 +17,10 @@
     <div id = "bSLoginContainer">
         <div class = "txbBSLoginInputBox">
             <p><span>帳號：</span>
-            <input type = "text" placeholder = "應包含至少1個英文字母及1個數字" oninput = "filterInput(this)" title = "填寫時請注意大小寫是否正確" maxlength = "20"/></p>
+                <input type = "text" id = "acc" oninput = "AccInput(this)" onblur = "AccBlur(event)" placeholder = "請輸入您的帳號" title = "請注意大小寫是否正確" maxlength = "20"/></p>
             <p><span>密碼：</span>
-            <input type = "password" id = "pwdBSLog" placeholder = "由大小寫英文及數字組成的6-20個混和字符" oninput = "filterInput(this) " title = "填寫時請注意大小寫是否正確" maxlength="20"/>
-            <img class = "togCursor" src = "../image/icons/eye-close.png" alt = "Hide Password" onclick = "PasswordEye(this)"/></p>
+                <input type = "password" id = "pwd" oninput = "PwdInput(this)" onblur = "PwdBlur(event)" placeholder = "請輸入您的密碼" title = "請注意大小寫是否正確" maxlength = "20"/>
+                    <img class = "togCursor" src = "../image/icons/eye-close.png" alt = "Hide Password" onclick = "PasswordEye(this)" /></p>
         </div>
         <div class = "bSAllSubContainer">
             <input value = "登入" class = "btnBSAllSub1" onclick = "Sumbtion()"/>

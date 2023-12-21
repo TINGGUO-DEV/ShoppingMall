@@ -41,8 +41,6 @@ function Pwd2Blur(e) {
     var target = e.currentTarget;
     var value = target.value;
 
-    console.log(value.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,20}$/));
-
     if (value.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,20}$/) == null) {
         target.style.borderColor = "red";
 
@@ -106,7 +104,7 @@ function Sumbtion() {
     }
 
     if (pwdSec.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,20}$/) == null) {
-        alert('請確認您輸入的密碼是否與上一列設定的密碼相同');
+        alert('請確認您第二次輸入的密碼是否與上一列設定的相同');
         return;
     }
 
@@ -159,13 +157,8 @@ function Sumbtion() {
             }
         },
 
-        error: function (xhr, status, error) {
-
-            console.log("Status: " + status);
-            console.log("Error: " + error);
-            console.log(xhr);
+        error: function () {
             alert("登入失敗，請稍後重試或聯繫客服");
-
         }
     });
 };

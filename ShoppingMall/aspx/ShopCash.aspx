@@ -23,9 +23,9 @@
             <a href = "">喜好商品</a>
         </div>
         <div class = "nvaIcons">
-            <div class = "nvaIconsUser" onmouseover = "OpenPopUp('popUp')" onmouseout = "ClosePopUp('popUp')">
+            <div class = "popUps" onmouseover = "OpenPopUp('popUpIcon')" onmouseout = "ClosePopUp('popUpIcon')">
                 <a href = "Login.aspx"><img src = "../image/icons/user.png" alt = "會員"/></a>
-                        <div class = "nvaIconsPopUp" id = "popUp">
+                    <div class = "popUpIcons" id = "popUpIcon">
                         <button onclick = "window.location.href = 'User.aspx'">會員中心</button>
                         <button>登出</button>
                     </div>
@@ -46,9 +46,9 @@
         </div>
         <div id = "mbrRightSpace">
             <div class = "txbAllInputBox">
-                <p><span>當前可用餘額：</span>text</p>
+                <p><span>當前可用餘額：</span>text</p><!--balance 額度-->
                 <p><span>儲值金額：</span>
-                <input type = "text" id = "orderId" name = "orderId" placeholder = "請輸入您要儲值的金額" oninput = "orderIdInput(this)" maxlength = "5" required /></p>
+                <input type = "text" id = "orderId" oninput = "CashInput(this)" onblur = "CashBlur(event)" placeholder = "請輸入您要儲值的金額" maxlength = "5"/></p>
                 <div><input value = "儲值" id = "btnAllSub" onclick = "Sumbtion()"/><a href = "">交易紀錄查詢</a></div>
             </div>   
         </div>

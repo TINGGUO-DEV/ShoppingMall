@@ -2,7 +2,7 @@
     display:flex;
 }
 
-.btnBSAllSub1 { /*BSAllSub1 提交按鈕*/
+.btnBSAllSub1 { 
     width: 130px;
     height: 45px;
     font-size: 20px;
@@ -16,11 +16,11 @@
     text-align: center;
 }
 
-.btnBSAllSub1:hover { /*BSAllSub1:hover*/
+.btnBSAllSub1:hover { 
     background-color: red;
 }
 
-.btnBSAllSub2 { /*BSAllSub2*/
+.btnBSAllSub2 { 
     width: 130px;
     height: 45px;
     font-size: 20px;
@@ -36,7 +36,7 @@
     color: inherit;
 }
 
-    .btnBSAllSub2:hover { /*BSAllSub2:hover*/
+    .btnBSAllSub2:hover {
         color: #00FFFF;
     }
 

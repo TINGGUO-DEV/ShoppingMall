@@ -17,7 +17,7 @@
         <div class = "btnBSNavs">
             <a href = "BSAcc.aspx">帳號</a>
             <a href = "BSUser.aspx">會員</a>
-            <a href = "BSProduct.aspx" >商品</a>
+            <a href = "BSProd.aspx" >商品</a>
             <a href = "BSOrder.aspx">訂單</a>
         </div>
     </div>

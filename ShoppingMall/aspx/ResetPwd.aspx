@@ -8,7 +8,7 @@
     <title>重設密碼</title>
     <script src = "https://code.jquery.com/jquery-3.4.1.js" integrity = "sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin = "anonymous"></script>
     <script src = "../js/AllJs.js" type = "text/javascript"></script>
-    <script src = "../js/ForgotPwd.js" type = "text/javascript"></script>
+    <script src = "../js/ResetPwd.js" type = "text/javascript"></script>
     <link href = "../css/AllStyle.css" rel = "stylesheet" type = "text/css"/>
 </head>
 <body>
@@ -22,9 +22,9 @@
                 <a href = "">喜好商品</a>
             </div>
             <div class = "nvaIcons">
-                <div class = "nvaIconsUser" onmouseover = "OpenPopUp('popUp')" onmouseout = "ClosePopUp('popUp')">
+                <div class = "popUps" onmouseover = "OpenPopUp('popUpIcon')" onmouseout = "ClosePopUp('popUpIcon')">
                     <a href = "Login.aspx"><img src = "../image/icons/user.png" alt = "會員"/></a>
-                        <div class = "nvaIconsPopUp" id = "popUp">
+                        <div class = "popUpIcons" id = "popUpIcon">
                             <button onclick = "window.location.href = 'User.aspx'">會員中心</button>
                             <button>登出</button>
                         </div>
@@ -36,7 +36,7 @@
         <div id =  "allContainer">
             <div class = "txbAllInputBox">
                 <p>電子信箱：</p>
-                <p><input type = "email"id = "Mail" placeholder = "example@example.com" oninput = "MailInput(this)" maxlength = "50" required /></p>
+                <p><input type = "email"id = "mail" oninput = "MailInput(this)" onblur = "MailBlur(event)" placeholder = "example@example.com" title = "請確認您輸入的信箱格式是否正確" maxlength = "50"/></p>
                 <div><input value = "發送驗證碼" id = "btnAllSub" onclick = "Sumbtion()"/></div>
             </div>
         </div>

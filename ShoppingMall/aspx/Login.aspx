@@ -22,9 +22,9 @@
                 <a href = "">喜好商品</a>
             </div>
             <div class = "nvaIcons">
-                <div class = "nvaIconsUser" onmouseover = "OpenPopUp('popUp')" onmouseout = "ClosePopUp('popUp')">
+                <div class = "popUps" onmouseover = "OpenPopUp('popUpIcon')" onmouseout = "ClosePopUp('popUpIcon')">
                     <a href = "Login.aspx"><img src = "../image/icons/user.png" alt = "會員"/></a>
-                        <div class = "nvaIconsPopUp" id = "popUp">
+                        <div class = "popUpIcons" id = "popUpIcon">
                             <button onclick = "window.location.href = 'User.aspx'">會員中心</button>
                             <button>登出</button>
                         </div>
@@ -36,9 +36,9 @@
         <div id =  "allContainer">
             <div class = "txbAllInputBox">
                 <p><span>帳號：</span>
-                <input type = "text" id = "Acc" onblur = "AccBlur(event)" placeholder = "請輸入您的帳號" oninput = "AccInput(this)" title = "請注意大小寫是否正確" maxlength = "20"/></p>
+                <input type = "text" id = "acc" oninput = "AccInput(this)" onblur = "AccBlur(event)" placeholder = "請輸入您的帳號" title = "請注意大小寫是否正確" maxlength = "20"/></p>
                 <p><span>密碼：</span>
-                <input type = "password" id = "PwdLog"onblur = "PwdLogBlur(event)" placeholder = "請輸入您的密碼" oninput = "PwdLogInput(this)" title = "請注意大小寫是否正確" maxlength = "20"/>
+                <input type = "password" id = "pwd" oninput = "PwdInput(this)" onblur = "PwdBlur(event)" placeholder = "請輸入您的密碼" title = "請注意大小寫是否正確" maxlength = "20"/>
                     <img class = "togCursor" src = "../image/icons/eye-close.png" alt = "Hide Password" onclick = "PasswordEye(this)" /></p>
                 <div>
                     <input value = "登入" id = "btnAllSub" onclick = "Sumbtion()"/>

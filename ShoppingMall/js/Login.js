@@ -2,26 +2,26 @@
     acc.value = acc.value.replace(/[^a-zA-Z\d]/g, '');
 }
 
-function PwdLogInput(pwdLog) {
-    pwdLog.value = pwdLog.value.replace(/[^a-zA-Z\d]/g, '');
+function PwdInput(pwd) {
+    pwd.value = pwd.value.replace(/[^a-zA-Z\d]/g, '');
 }
 
 function AccBlur(e) {
     var target = e.currentTarget;
     var value = target.value;
 
-    if (value.match(/(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{1, 20}$/) == null) {
+    if (value.match(/(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{1,20}$/) == null) {
         target.style.borderColor = "red";
     } else {
         target.style.borderColor = "green";
     }
 }
 
-function PwdLogBlur(e) {
+function PwdBlur(e) {
     var target = e.currentTarget;
     var value = target.value;
 
-    if (value.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6, 20}$/) == null) {
+    if (value.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,20}$/) == null) {
         target.style.borderColor = "red";
     } else {
         target.style.borderColor = "green";
@@ -29,15 +29,15 @@ function PwdLogBlur(e) {
 }
 
 function Sumbtion() {
-    var acc = $('#Acc').val();
-    var pwd = $('#Pwd1').val();
+    var acc = $('#acc').val();
+    var pwd = $('#pwd').val();
 
     if (acc.match(/(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{1,20}$/) == null) {
-        alert('請確認您輸入的帳號至少包含1個英文字母及1個數字');
+        alert('請確認您輸入的帳號是否正確');
         return;
     }
     if (pwd.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,20}$/) == null) {
-        alert('請確認您輸入的密碼是由大小寫字母各1及1個數字組成的6-20個混和字符');
+        alert('請確認您輸入的密碼是否正確');
         return;
     }
 
@@ -48,7 +48,6 @@ function Sumbtion() {
             method: 'login',
             acc: acc,
             pwd: pwd,
-
         },
         dataType: 'json',
 
@@ -59,20 +58,15 @@ function Sumbtion() {
 
             } else if (data.status === 1) {
                 alert("帳號or密碼錯誤");
-                $('#Acc').val('');
+                $('#acc').val('');
+                $('#pwd').val('');
 
             } else if (data.status === 2) {
                 alert("已封鎖");
             }
-
         },
-        error: function (xhr, status, error) {
-
-            console.log("Status: " + status);
-            console.log("Error: " + error);
-            console.log(xhr);
+        error: function () {
             alert("登入失敗，請稍後重試或聯繫客服");
-
         }
     });
 };

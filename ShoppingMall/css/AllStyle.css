@@ -1,4 +1,5 @@
-﻿#labAllWebTitle {                           /*AllWebTitle*/
+﻿
+#labAllWebTitle {                     
     font-size: 40px;
     margin-top: 40px;
     margin-bottom: 20px;
@@ -6,14 +7,14 @@
     color: #888888;
 }
 
-#labAllfooter {                              /*AllSubTitle頁尾*/
+#labAllfooter {                           
     font-size: 20px;
     margin: 20px;
     text-align: center;
     color: #888888;
 }
 
-#btnAllSub {                            /*AllSubmission 提交按鈕*/
+#btnAllSub {                          
     width: 130px;
     height: 45px;
     font-size: 20px;
@@ -26,74 +27,71 @@
     cursor: pointer;
     text-align: center;
 }
-
-    #btnAllSub:hover {                  /*AllSubmission:hover*/
+    #btnAllSub:hover {                 
         background-color: red;
     }
 
-#btnAllSubCancel {                      /*AllSubmissionCancel*/
-    width: 130px;
-    height: 45px;
+#btnAllSubCancel {
+    width: 128px;
+    height: 43px;
     font-size: 20px;
     font-weight: 700;
     border-radius: 5px;
-    border: none;
+    border-color: #64A600;
     cursor: pointer;
     text-align: center;
     margin-top: 20px;
     margin-right: 20px;
     margin-left: 10px;
 }
-
-    #btnAllSubCancel:hover {            /*AllSubmissionCancel:hover*/
+    #btnAllSubCancel:hover {
         background-color: red;
+        color: #ffffff;
+        border: red;
     }
 
-.btnAllLink {                           /*AllLinkBtn*/
+.btnAllLink {                 
     text-align: center;
     cursor: pointer;
     margin: 30px;
 }
-    .btnAllLink a {                      /*AllLinkBtn a*/
+    .btnAllLink a {                    
         margin-left: 20px;
         color: inherit;
         cursor: pointer;
     }
 
-    .btnAllLink a:hover {              /*AllLinkBtn a:hover*/
+    .btnAllLink a:hover {          
         color: #00FFFF;
     }
-
-    
-    
-#allContainer {                       /*AllContainer*/
+ 
+#allContainer {                   
     display: flex;
     justify-content: center;
     text-align: center;
     margin-top: 40px;
 }
 
-    .txbAllInputBox {                            /*包在輸入框外的框*/
+    .txbAllInputBox {                           
         width: 550px;
         text-align: left;
         margin:50px;
         margin-left:10%;
     }
 
-        .txbAllInputBox input {                 /*AllInputBox input 輸入框*/
+        .txbAllInputBox input {          
             border: 2px solid #34c2ff;
             height: 30px;
             width: 300px;
             margin-bottom: 20px;
         }
 
-        .txbAllInputBox a {                     /*AllInputBox a*/
+        .txbAllInputBox a {                
             margin-left: 20px;
             color: inherit;
             cursor: pointer;
         }
-
-            .txbAllInputBox a:hover {           /*AllInputBox a:hover*/
+            .txbAllInputBox a:hover {    
                 color: #00FFFF;
             }
 
@@ -107,7 +105,7 @@
     height: 30px;
     font-size: 15px;
     color: #ffffff;
-    background-color: #64A600;
+    background-color: red;
     font-weight: 600;
     margin-left: 15px;
     border-radius: 3px;
@@ -116,9 +114,8 @@
     text-align: center;
     position: relative;
 }
-
     .btnAllSml:hover {
-        background-color: red;
+        background-color: #64A600;
         border-radius: 3px;
     }
 
@@ -136,14 +133,14 @@
     display: flex;
 }
 
-    .btnNavs {      /*NavBars*/
+    .btnNavs { 
         flex: auto;
         display: flex;
         justify-content: flex-start;
         margin-left:20px;
     }
 
-        .btnNavs a {   /*NavBars a*/
+        .btnNavs a { 
             font-size: 20px;
             text-decoration: none;
             color: #272727;
@@ -151,8 +148,7 @@
             margin-right: 30px;
             cursor: pointer;
         }
-
-            .btnNavs a:hover {    /*NavBars a:hover*/
+            .btnNavs a:hover { 
                 color: #00FFFF;
             }
 
@@ -168,33 +164,6 @@
             margin-right: 30px;
             /*/filter: invert(1); 不安全，在不同瀏覽器有不一樣的效用*/ 
         }
-
-                .nvaIconsPopUp {
-                    display: none;
-                    position: absolute;
-                    background-color: #003E3E;
-                    width: 120px;
-                    height: 100px;
-                    border-radius: 5px;
-                    top: 35px; /* 距離 NvaIconsUser 底部的距離 */
-                    right: 35px;
-                }
-                    .nvaIconsPopUp button {    /*NvaIconsPopUp button*/
-                        width: auto;
-                        height: 50%;
-                        margin: auto;
-                        font-size: 20px;
-                        background-color: transparent;
-                        border: none;
-                        color: #ffffff;
-                        cursor: pointer;
-                        display: block;
-                    }
-
-                        .nvaIconsPopUp button:hover {      /*NvaIconsPopUp button:hover*/
-                            color: #00FFFF;
-                        }
-
 
 #mbrContainer {  /*Mbr 會員中心*/
     display: flex;
@@ -225,13 +194,13 @@
         margin-left: 12%;
     }
 
-            .btnMbrNavs {              /*MbrNavBars*/
+            .btnMbrNavs {           
                 margin-top: 40px;
                 display: flex;
                 flex-direction: column;
                 align-items: center; 
             }
-                .btnMbrNavs p {    /*MbrNavBars p*/
+                .btnMbrNavs p {   
                     display: flex;
                     align-items: center;
                     margin: 20px;
@@ -240,35 +209,118 @@
                     border-bottom: 2px solid #BEBEBE;
                 }
 
-                .btnMbrNavs a {    /*MbrNavBars a*/
+                .btnMbrNavs a {   
                     font-size: 20px;
                     text-decoration: none;
                     color: white;
                     margin: 10px;
                     cursor: pointer;
                 }
-
-                    .btnMbrNavs a:hover {          /*MbrNavBars a:hover*/
+                    .btnMbrNavs a:hover {        
                         color: #00FFFF;
                     }
-
+/*彈窗一律使用*/
 .popUps {
     position: relative;
 }
 
+/*文字提示小彈窗*/
 .popUpBox {
     display: none;
     position: absolute;
     background-color: #003E3E;
-    width: 200px;
+    width: 230px;
     height: 40px;
     border-radius: 5px;
     top: 35px;
     left:15px;
 }
 
-.labHint {
+.labpopUpBoxP {
     font-size: 15px;
     line-height: 40px;
     margin-left:10px;
 }
+
+/*icon下會員小彈窗*/
+.popUpIcons {
+    display: none;
+    position: absolute;
+    background-color: #003E3E;
+    width: 120px;
+    height: 100px;
+    border-radius: 5px;
+    top: 35px; 
+    right: 35px;
+}
+
+    .popUpIcons button {
+        width: auto;
+        height: 50%;
+        margin: auto;
+        font-size: 20px;
+        background-color: transparent;
+        border: none;
+        color: #ffffff;
+        cursor: pointer;
+        display: block;
+    }
+        .popUpIcons button:hover {
+            color: #00FFFF;
+        }
+
+/*確認&取消彈窗*/
+.popUpConfBox {
+    display: none;
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: white;
+    border: 2px solid #003E3E;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+    .popUpConfP{
+                font-size: 20px;
+                margin-top:20px;
+                margin-left:70px;
+            }
+.btnsBox {
+    display: flex;
+    margin-top:80px;
+    margin-left:110px;
+}
+    .btnConf {
+        width: 80px;
+        height: 50px;
+        font-size: 20px;
+        background-color: #64A600;
+        border-color: #64A600;
+        cursor: pointer;
+        border-radius: 10px;
+        display: block;
+        margin-left:20px;
+        }
+            .btnConf:hover {
+                background-color: red;
+                color: #ffffff;
+                border:red;
+            }
+    .btnCancel {
+        width: 80px;
+        height: 50px;
+        font-size: 20px;
+        background-color: white;
+        border-color: #64A600;
+        cursor: pointer;
+        border-radius: 10px;
+        display: block;
+    }
+        .btnCancel:hover {
+            background-color: red;
+            color: #ffffff;
+            border:red;
+        }
+

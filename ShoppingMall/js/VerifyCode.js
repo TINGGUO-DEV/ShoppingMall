@@ -1,19 +1,34 @@
 ﻿
-
 function NumInput(Num) {
     Num.value = Num.value.replace(/[^\d]/g, '');
 }
 
+function NumBlur(e) {
+    var target = e.currentTarget;
+    var value = target.value;
+
+    if (value.match(/\d{6}$/) == null) {
+        target.style.borderColor = "red";
+    } else {
+        target.style.borderColor = "green";
+    }
+}
+
 function Sumbtion() {
 
-    var mail = $('#Mail').val();
+    var vfyCode = $('#vfyCode').val();
+
+    if (vfyCode.match(/\d{6}$/) == null) {
+        alert('請輸入6位數字驗證碼');
+        return;
+    }
 
     $.ajax({
         url: "/ajax/member.aspx",
         method: "POST",
         data: {
-            method: 'sendCode',
-            mail: mail,
+            method: 'authVerifyCode',
+            vfyCode: vfyCode,
         },
         dataType: 'json',
 
@@ -23,30 +38,11 @@ function Sumbtion() {
                 window.location.href = "Login.aspx";
 
             } else if (data.status === 1) {           //出現彈窗，有"重新發送驗證碼"及"回到註冊頁"()
-                
 
             } 
-
         },
-        error: function (xhr, status, error) {
-
-            console.log("Status: " + status);
-            console.log("Error: " + error);
-            console.log(xhr);
+        error: function () {
             alert("發送失敗，請稍後重試或聯繫客服");
-
         }
     });
 };
-
-/*這裡使用的是表是t_memberResetToken(密碼重置Token表)，參數為token
-
-* 正確的測試帳密
-
-$('#Mail').val('12@21');
-
-*不正確的測試帳密
-
-$('#Mail').val('12');
-
- */
