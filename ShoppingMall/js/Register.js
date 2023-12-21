@@ -41,11 +41,8 @@ function Pwd2Blur(e) {
     var target = e.currentTarget;
     var value = target.value;
 
-    console.log(value.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,20}$/));
-
     if (value.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,20}$/) == null) {
         target.style.borderColor = "red";
-
     } else {
         target.style.borderColor = "green";
     }
@@ -159,13 +156,8 @@ function Sumbtion() {
             }
         },
 
-        error: function (xhr, status, error) {
-
-            console.log("Status: " + status);
-            console.log("Error: " + error);
-            console.log(xhr);
+        error: function () {
             alert("登入失敗，請稍後重試或聯繫客服");
-
         }
     });
 };

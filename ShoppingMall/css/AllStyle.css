@@ -169,33 +169,6 @@
             /*/filter: invert(1); 不安全，在不同瀏覽器有不一樣的效用*/ 
         }
 
-                .nvaIconsPopUp {
-                    display: none;
-                    position: absolute;
-                    background-color: #003E3E;
-                    width: 120px;
-                    height: 100px;
-                    border-radius: 5px;
-                    top: 35px; /* 距離 NvaIconsUser 底部的距離 */
-                    right: 35px;
-                }
-                    .nvaIconsPopUp button {    /*NvaIconsPopUp button*/
-                        width: auto;
-                        height: 50%;
-                        margin: auto;
-                        font-size: 20px;
-                        background-color: transparent;
-                        border: none;
-                        color: #ffffff;
-                        cursor: pointer;
-                        display: block;
-                    }
-
-                        .nvaIconsPopUp button:hover {      /*NvaIconsPopUp button:hover*/
-                            color: #00FFFF;
-                        }
-
-
 #mbrContainer {  /*Mbr 會員中心*/
     display: flex;
 }
@@ -272,3 +245,30 @@
     line-height: 40px;
     margin-left:10px;
 }
+
+.popUpIcons {
+    display: none;
+    position: absolute;
+    background-color: #003E3E;
+    width: 120px;
+    height: 100px;
+    border-radius: 5px;
+    top: 35px; /* 距離 NvaIconsUser 底部的距離 */
+    right: 35px;
+}
+
+    .popUpIcons button { /*NvaIconsPopUp button*/
+        width: auto;
+        height: 50%;
+        margin: auto;
+        font-size: 20px;
+        background-color: transparent;
+        border: none;
+        color: #ffffff;
+        cursor: pointer;
+        display: block;
+    }
+
+        .popUpIcons button:hover { /*NvaIconsPopUp button:hover*/
+            color: #00FFFF;
+        }
