@@ -43,7 +43,6 @@ function Pwd2Blur(e) {
 
     if (value.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,20}$/) == null) {
         target.style.borderColor = "red";
-
     } else {
         target.style.borderColor = "green";
     }
