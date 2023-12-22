@@ -1,4 +1,11 @@
-﻿using System;
+﻿#region 功能與歷史修改描述
+/*
+    描述: 底層
+    日期: 2023-12-22
+*/
+#endregion
+
+using System;
 using System.Configuration;
 using System.Security.Cryptography;
 using System.Text;
