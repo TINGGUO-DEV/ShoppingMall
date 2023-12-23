@@ -28,6 +28,13 @@ function PwdBlur(e) {
     }
 }
 
+function LoggedIn() {
+    var iconConv = document.querySelector('.nvaIcons a');
+    if (iconConv) {
+        iconConvr.href = 'User.aspx';
+    }
+}
+
 function Sumbtion() {
     var acc = $('#acc').val();
     var pwd = $('#pwd').val();
@@ -54,6 +61,7 @@ function Sumbtion() {
         success: function (data) {
             if (data.status === 0) {
                 alert("成功登入");
+                LoggedIn();
                 window.location.href = "AllProd.aspx";
 
             } else if (data.status === 1) {

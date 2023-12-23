@@ -7,8 +7,8 @@
 <meta http-equiv = "Content-Type" content = "text/html; charset = utf-8"/>
     <title>會員管理</title>
     <script src = "https://code.jquery.com/jquery-3.4.1.js" integrity = "sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin = "anonymous"></script>
-    <script src = "../js/BSAllJs.js" type = "text/javascript"></script>
-    <script src = "../js/BSMember.js" type = "text/javascript"></script>
+    <script src = "../bs_js/BSAllJs.js" type = "text/javascript"></script>
+    <script src = "../bs_js/BSUser.js" type = "text/javascript"></script>
     <link href = "../css/BSAllStyle.css" rel = "stylesheet" type = "text/css"/>
 </head>
 <body>
@@ -30,7 +30,38 @@
                 </div>
             </div>
             <div class = "bSRightSpaceFrame">         <!-- 右邊內部框的容器-->
-
+                <div class="TableStytle">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th><img src ="../image/icons/cil-sort-descending.png" class="sort" onclick="Sort()"/></th>
+                            </tr>
+                            <tr>
+                                <th>姓名</th>
+                                <th>帳號</th>
+                                <th>信箱</th>
+                                <th>手機</th>
+                                <th>地址</th>
+                                <th>等級</th>
+                                <th>停權</th>
+                                <th>建立時間</th>
+                                <th>最後登入時間</th>
+                                <th>備註</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                             
+                            </tr>
+                            <tr>
+                              
+                            </tr>
+                            <tr>
+                     
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>

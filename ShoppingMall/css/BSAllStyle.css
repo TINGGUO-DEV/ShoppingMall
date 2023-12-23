@@ -148,3 +148,39 @@
             width: 30px;
             height: auto;
         }
+
+.TableStyle {
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    width: 90%;
+    border-spacing: 0; /*間距*/
+    border: 1px solid #6b675d;
+}
+
+th, td { /*欄寬,欄高,置中,線條*/
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    border: 0.5px solid #6b675d;
+}
+
+th { /*標頭*/
+    background-color: #6b675d;
+    color: #ffffff;
+    height: 40px;
+}
+
+td { /*列*/
+    background-color: #f3f3f3;
+}
+
+img.sort {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}

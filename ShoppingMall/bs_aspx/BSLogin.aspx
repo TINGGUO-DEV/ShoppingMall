@@ -7,9 +7,8 @@
 <meta http-equiv = "Content-Type" content = "text/html; charset = utf-8"/>
     <title>後台登入</title>
     <script src = "https://code.jquery.com/jquery-3.4.1.js" integrity = "sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin = "anonymous"></script>
-    <script src = "../js/AllJs.js" type = "text/javascript"></script>
-    <script src = "../js/BSAllJs.js" type = "text/javascript"></script>
-    <script src = "../js/BSLogin.js" type = "text/javascript"></script>
+    <script src = "../bs_js/BSAllJs.js" type = "text/javascript"></script>
+    <script src = "../bs_js/BSLogin.js" type = "text/javascript"></script>
     <link href = "../css/BSAllStyle.css" rel = "stylesheet" type = "text/css"/>
 </head>
 <body>
@@ -24,7 +23,7 @@
         </div>
         <div class = "bSAllSubContainer">
             <input value = "登入" class = "btnBSAllSub1" onclick = "Sumbtion()"/>
-            <a href = "Home.aspx"class = "btnBSAllSub2"><span>前往官網</span></a>
+            <a href = "../aspx/Home.aspx"class = "btnBSAllSub2"><span>前往官網</span></a>
         </div> 
     </div>       
 </body>

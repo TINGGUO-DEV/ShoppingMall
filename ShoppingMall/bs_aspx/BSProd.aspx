@@ -7,8 +7,8 @@
 <meta http-equiv = "Content-Type" content = "text/html; charset = utf-8"/>
     <title>商品管理</title>
     <script src = "https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin = "anonymous"></script>
-    <script src = "../js/BSAllJs.js" type = "text/javascript"></script>
-    <script src = "../js/BSProd.js" type = "text/javascript"></script>
+    <script src = "../bs_js/BSAllJs.js" type = "text/javascript"></script>
+    <script src = "../bs_js/BSProd.js" type = "text/javascript"></script>
     <link href = "../css/BSAllStyle.css" rel = "stylesheet" type = "text/css"/>
 </head>
 <body>

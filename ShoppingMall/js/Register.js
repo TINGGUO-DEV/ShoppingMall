@@ -43,6 +43,7 @@ function Pwd2Blur(e) {
 
     if (value.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,20}$/) == null) {
         target.style.borderColor = "red";
+
     } else {
         target.style.borderColor = "green";
     }
@@ -130,7 +131,7 @@ function Sumbtion() {
         },
         dataType: 'json',
 
-        success: function (data) {
+        success: function (data) {      //response
             if (data.status === 0) {
                 alert("非預期錯誤");
 

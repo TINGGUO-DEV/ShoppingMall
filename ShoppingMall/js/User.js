@@ -1,12 +1,54 @@
-﻿
-function PhoneInput(phone) {
-    phone.value = phone.value.replace(/^[^0]|[^\d]/g, '');
-}
+﻿//待修改，驗證後替換圖示未加入
+function validateEmail() {
+    var emailInput = document.getElementById('email');
+    var submitButton = document.getElementById('btnsub');
 
+    // 模拟从后端获取的数据
+    var backResponse = {
+        isValid: true // 或者从后端获取的实际验证结果
+    };
+
+    // 假设后端响应是一个包含 isValid 字段的 JSON 对象
+    if (backResponse.isValid) {
+        submitButton.innerHTML = '已驗證';
+        submitButton.style.color = '#64A600';
+
+    } else {
+        submitButton.innerHTML = '驗證';
+    }
+}
+function NameInput(name) {
+    name.value = name.value.replace(/[^a-zA-Z\u4E00-\u9FA5]/g, '');
+}
+function AddressInput(address) {
+    address.value = address.value.replace(/[^\u4E00-\u9FA5\w]/g, '');
+}
 function MailInput(mail) {
     mail.value = mail.value.replace(/^[^a-zA-Z\d]|[^a-zA-Z\d@.-]/g, '');
 }
+function PhoneInput(phone) {
+    phone.value = phone.value.replace(/^[^0]|[^\d]/g, '');
+}
+function NameBlur(e) {
+    var target = e.currentTarget;
+    var value = target.value;
 
+    if (value.match(/^[a-zA-Z\u4E00-\u9FA5]+$/) == null) {
+        target.style.borderColor = "red";
+    } else {
+        target.style.borderColor = "green";
+    }
+}
+function AddressBlur(e) {
+    var target = e.currentTarget;
+    var value = target.value;
+
+    if (value.match(/^[\u4E00-\u9FA5\w]+$/) == null) {
+        target.style.borderColor = "red";
+    } else {
+        target.style.borderColor = "green";
+    }
+}
 function MailBlur(e) {
     var target = e.currentTarget;
     var value = target.value;
@@ -35,9 +77,19 @@ function CancelSumbtion() {
 
 function Sumbtion() {
     var name = $('#name').val();
-    var adress = $('#adress').val();
+    var address = $('#address').val();
     var mail = $('#mail').val();
     var phone = $('#phone').val();
+
+    if (!/^[a-zA-Z\u4E00-\u9FA5]+$/.test(name)) {
+        alert('輸入的姓名請勿包含特殊字元ex.%#&@');
+        return;
+    }
+
+    if (!/^[\u4E00-\u9FA5\w]+$/.test(address)) {
+        alert('輸入的地址請勿包含特殊字元ex.%#&@');
+        return;
+    }
 
     if (mail.match(/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9]+\.\w+([-.]\w+)*$/) == null) {
         alert('請確認您輸入的信箱格式是否正確');
@@ -53,7 +105,7 @@ function Sumbtion() {
         url: "/ajax/Member.aspx",
         method: "POST",
         data: {
-            method: 'register',
+            method: 'User',
             name: name,
             address: address,
             mail: mail,

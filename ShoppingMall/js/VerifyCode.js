@@ -24,7 +24,7 @@ function Sumbtion() {
     }
 
     $.ajax({
-        url: "/ajax/member.aspx",
+        url: "/ajax/Member.aspx",
         method: "POST",
         data: {
             method: 'authVerifyCode',
