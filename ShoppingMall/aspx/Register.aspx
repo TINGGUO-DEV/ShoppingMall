@@ -47,7 +47,7 @@
             <input type = "email"id = "mail" oninput = "MailInput(this)" onblur = "MailBlur(event)" placeholder = "example@example.com" title = "請確認您輸入的信箱格式是否正確" maxlength = "50"/></p>
             <p><span>手機號碼：</span>
             <input type = "tel" id = "phone" onblur = "PhoneBlur(event)" placeholder = "0912345678" oninput = "PhoneInput(this)" maxlength = "10" title = "請確保您輸入的是09開頭的十位電話號碼"/></p>
-            <div><input value = "立即註冊" id = "btnAllSub" onclick = "Sumbtion()"/><a href = "login.aspx">已有帳號(點擊登入)</a></div>        
+            <div><input value = "立即註冊" id = "btnAllSub" onclick = "Sumbtion()"/><a href = "login.aspx" class="txbAllInputBoxBtn">已有帳號(點擊登入)</a></div>        
         </div>       
     </div>
 </body>

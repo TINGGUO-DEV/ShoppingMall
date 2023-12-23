@@ -23,6 +23,17 @@ function Sumbtion() {
         return;
     }
 
+    var data = { vfyCode: '123456' };
+
+    if (vfyCode === data.vfyCode) {
+        alert('信箱驗證成功');
+        window.location.href = "../aspx/Home.aspx";
+
+    } else {
+        alert('驗證失敗，請重新發送驗證碼');
+    }
+}
+/*
     $.ajax({
         url: "/ajax/Member.aspx",
         method: "POST",
@@ -35,7 +46,7 @@ function Sumbtion() {
         success: function (data) {
             if (data.status === 0) {
                 alert("信箱已成功認證");
-                window.location.href = "Login.aspx";
+                window.location.href = "../aspx/Login.aspx";
 
             } else if (data.status === 1) {           //出現彈窗，有"重新發送驗證碼"及"回到註冊頁"()
 
@@ -46,3 +57,4 @@ function Sumbtion() {
         }
     });
 };
+*/

@@ -28,13 +28,6 @@ function PwdBlur(e) {
     }
 }
 
-function LoggedIn() {
-    var iconConv = document.querySelector('.nvaIcons a');
-    if (iconConv) {
-        iconConvr.href = 'User.aspx';
-    }
-}
-
 function Sumbtion() {
     var acc = $('#acc').val();
     var pwd = $('#pwd').val();
@@ -60,9 +53,7 @@ function Sumbtion() {
 
         success: function (data) {
             if (data.status === 0) {
-                alert("成功登入");
-                LoggedIn();
-                window.location.href = "AllProd.aspx";
+                alert("非預期錯誤");
 
             } else if (data.status === 1) {
                 alert("帳號or密碼錯誤");
@@ -71,6 +62,11 @@ function Sumbtion() {
 
             } else if (data.status === 2) {
                 alert("已封鎖");
+
+            } else if (data.status === 1024) {
+                alert("成功登入");
+                window.location.href = "AllProd.aspx";
+
             }
         },
         error: function () {
@@ -80,17 +76,8 @@ function Sumbtion() {
 };
 
 /* 正確的測試帳密
-
-$('#Acc').val('a12');
-$('#Pwd').val('a123546A');
-
+$('#acc').val('a12');
+$('#pwd').val('a123546A');
 */
 
-/*不正確的測試帳密
-
-$('#Acc').val('a');
-$('#Pwd').val('a1235A');
-
-
- */
 

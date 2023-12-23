@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace ShoppingMall.aspx
 {
-    public partial class BSAcc : System.Web.UI.Page
+    public partial class ForgotPwd : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

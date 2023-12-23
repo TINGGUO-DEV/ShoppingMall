@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ResetPwd.aspx.cs" Inherits="ShoppingMall.aspx.ResetPwd1" %>
+﻿<%@ Page Language = "C#" AutoEventWireup = "true" CodeBehind = "ForgotPwd.aspx.cs" Inherits = "ShoppingMall.aspx.ForgotPwd" %>
 
 <!DOCTYPE html>
 
@@ -12,7 +12,7 @@
     <link href = "../css/AllStyle.css" rel = "stylesheet" type = "text/css"/>
 </head>
 <body>
-        <div id = "labAllWebTitle">重設密碼</div>
+    <div id = "labAllWebTitle">重設密碼</div>
         <div  id = "navContainer">
             <div class = "btnNavs">
                 <a href = "Home.aspx">首頁</a>
@@ -35,13 +35,9 @@
         </div>
         <div id =  "allContainer">
             <div class = "txbAllInputBox">
-                <p><span>輸入密碼：</span>
-                    <input type = "password" id = "pwd1" oninput = "PwdInput(this)" placeholder = "請以大小寫字母各1及1個數字組成6-20個混和字符" onblur = "Pwd1Blur(event)" title = "請確認密碼是否為大小寫字母各1及1個數字組成的6-20個混和字符" maxlength = "20"/>
-                    <img class = "togCursor" src = "../image/icons/eye-close.png" alt = "Hide Password" onclick = "PasswordEye(this)"/></p>
-                <p><span>密碼確認：</span>
-                    <input type = "password" id = "pwd2" oninput = "PwdInput(this)" placeholder = "請再輸入一次密碼" onblur = "Pwd2Blur(event)" title = "請確認您輸入的密碼是否與上一列設定的密碼相同" maxlength = "20"/>
-                    <img class = "togCursor" src = "../image/icons/eye-close.png" alt = "Hide Password" onclick = "PasswordEye(this)"/></p>
-                <div><input value = "確認修改" id = "btnAllSub" onclick = "Sumbtion()"/></div>
+                <p>電子信箱：</p>
+                <p><input type = "email"id = "mail" oninput = "MailInput(this)" onblur = "MailBlur(event)" placeholder = "example@example.com" title = "請確認您輸入的信箱格式是否正確" maxlength = "50"/></p>
+                <div><input value = "發送驗證碼" id = "btnAllSub" onclick = "Sumbtion()"/></div>
             </div>
         </div>
 </body>

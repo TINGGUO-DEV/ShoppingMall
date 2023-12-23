@@ -90,7 +90,6 @@ public partial class Member : BasePage
             string vfyCode = RandomCode();
             SqlCommand cmd = new SqlCommand(); //宣告SqlCommand物件
             cmd.Connection = new SqlConnection(this.ConnStr); //設定連線字串
-
             //以下try catch finally為固定寫法，且釋放資源必定要寫在finally裡
             //偵錯
             try
@@ -104,7 +103,7 @@ public partial class Member : BasePage
                 cmd.Parameters.Add("@mail", SqlDbType.VarChar).Value = mail;
                 cmd.Parameters.Add("@phone", SqlDbType.Char).Value = phone;
                 cmd.Parameters.Add("@verifyCode", SqlDbType.Char).Value = vfyCode;
-
+                
                 cmd.Connection.Open(); //開啟資料庫連線
 
                 int.TryParse(cmd.ExecuteScalar().ToString(), out result); //執行並取回資料
@@ -344,7 +343,7 @@ public partial class Member : BasePage
     /// <returns></returns>
     private bool ValidAccount(string acc)
     {
-        if (string.IsNullOrEmpty(acc) && new Regex("[a-zA-Z\\d]{2,20}").IsMatch(acc))
+        if (!string.IsNullOrEmpty(acc) && new Regex("[a-zA-Z\\d]{2,20}").IsMatch(acc))
         {
             return true;
         }

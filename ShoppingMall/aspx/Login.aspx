@@ -42,8 +42,8 @@
                     <img class = "togCursor" src = "../image/icons/eye-close.png" alt = "Hide Password" onclick = "PasswordEye(this)" /></p>
                 <div>
                     <input value = "登入" id = "btnAllSub" onclick = "Sumbtion()"/>
-                    <a href = "Register.aspx">立即註冊</a>
-                    <a href = "ResetPwd.aspx">忘記密碼</a>
+                        <a href = "Register.aspx" class = "txbAllInputBoxBtn">立即註冊</a>
+                        <a href = "ForgotPwd.aspx" class = "txbAllInputBoxBtn">忘記密碼</a>
                 </div>
             </div>
         </div>

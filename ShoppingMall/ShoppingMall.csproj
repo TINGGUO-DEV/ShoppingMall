@@ -90,7 +90,6 @@
   <ItemGroup>
     <Content Include="ajax\Member.aspx" />
     <Content Include="aspx\AllProd.aspx" />
-    <Content Include="aspx\BSUser.aspx" />
     <Content Include="aspx\CEProd.aspx" />
     <Content Include="aspx\ChangePwd.aspx" />
     <Content Include="aspx\FavProd.aspx" />
@@ -98,19 +97,25 @@
     <Content Include="aspx\Login.aspx" />
     <Content Include="aspx\Order.aspx" />
     <Content Include="aspx\Register.aspx" />
+    <Content Include="aspx\ResetPwd.aspx" />
     <Content Include="aspx\User.aspx" />
     <Content Include="aspx\VerifyCode.aspx" />
-    <Content Include="aspx\ResetPwd.aspx" />
+    <Content Include="aspx\ForgotPwd.aspx" />
     <Content Include="aspx\ShopCash.aspx" />
-    <Content Include="aspx\BSAcc.aspx" />
-    <Content Include="aspx\BSLogin.aspx" />
-    <Content Include="aspx\BSOrder.aspx" />
-    <Content Include="aspx\BSProd.aspx" />
-    <Content Include="js\BSAllJs.js" />
-    <Content Include="js\BSLogin.js" />
-    <Content Include="js\BSPopUp.js" />
+    <Content Include="bgAspx\BGAcc.aspx" />
+    <Content Include="bgAspx\BGLogin.aspx" />
+    <Content Include="bgAspx\BGOrder.aspx" />
+    <Content Include="bgAspx\BGProd.aspx" />
+    <Content Include="bgAspx\BGUser.aspx" />
+    <Content Include="bgJs\BSAcc.js" />
+    <Content Include="bgJs\BSAllJs.js" />
+    <Content Include="bgJs\BSLogin.js" />
+    <Content Include="bgJs\BSOrder.js" />
+    <Content Include="bgJs\BSPopUp.js" />
+    <Content Include="bgJs\BSProd.js" />
+    <Content Include="bgJs\BSUser.js" />
     <Content Include="css\AllStyle.css" />
-    <Content Include="css\BSAllStyle.css" />
+    <Content Include="css\BGAllStyle.css" />
     <Content Include="image\banners\Banner1.jpg" />
     <Content Include="image\icons\cil-sort-ascending.png" />
     <Content Include="image\icons\cil-sort-descending.png" />
@@ -122,19 +127,16 @@
     <Content Include="image\icons\user.png" />
     <Content Include="js\AllJs.js" />
     <Content Include="js\AllProd.js" />
-    <Content Include="js\BSAcc.js" />
-    <Content Include="js\BSUser.js" />
-    <Content Include="js\BSOrder.js" />
-    <Content Include="js\BSProd.js" />
     <Content Include="js\CEProd.js" />
     <Content Include="js\ChangePwd.js" />
     <Content Include="js\FavProd.js" />
     <Content Include="js\Login.js" />
+    <Content Include="js\ResetPwd.js" />
     <Content Include="js\User.js" />
     <Content Include="js\Order.js" />
     <Content Include="js\Register.js" />
     <Content Include="js\VerifyCode.js" />
-    <Content Include="js\ResetPwd.js" />
+    <Content Include="js\ForgotPwd.js" />
     <Content Include="js\ShopCash.js" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -146,7 +148,7 @@
     <Compile Include="ajax\Member.aspx.designer.cs">
       <DependentUpon>Member.aspx</DependentUpon>
     </Compile>
-    <Compile Include="app_code\BasePage.cs">
+    <Compile Include="appCode\BasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="aspx\AllProd.aspx.cs">
@@ -155,13 +157,6 @@
     </Compile>
     <Compile Include="aspx\AllProd.aspx.designer.cs">
       <DependentUpon>AllProd.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="aspx\BSUser.aspx.cs">
-      <DependentUpon>BSUser.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="aspx\BSUser.aspx.designer.cs">
-      <DependentUpon>BSUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="aspx\CEProd.aspx.cs">
       <DependentUpon>CEProd.aspx</DependentUpon>
@@ -212,6 +207,13 @@
     <Compile Include="aspx\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="aspx\ResetPwd.aspx.cs">
+      <DependentUpon>ResetPwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aspx\ResetPwd.aspx.designer.cs">
+      <DependentUpon>ResetPwd.aspx</DependentUpon>
+    </Compile>
     <Compile Include="aspx\User.aspx.cs">
       <DependentUpon>User.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -226,12 +228,12 @@
     <Compile Include="aspx\VerifyCode.aspx.designer.cs">
       <DependentUpon>VerifyCode.aspx</DependentUpon>
     </Compile>
-    <Compile Include="aspx\ResetPwd.aspx.cs">
-      <DependentUpon>ResetPwd.aspx</DependentUpon>
+    <Compile Include="aspx\ForgotPwd.aspx.cs">
+      <DependentUpon>ForgotPwd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="aspx\ResetPwd.aspx.designer.cs">
-      <DependentUpon>ResetPwd.aspx</DependentUpon>
+    <Compile Include="aspx\ForgotPwd.aspx.designer.cs">
+      <DependentUpon>ForgotPwd.aspx</DependentUpon>
     </Compile>
     <Compile Include="aspx\ShopCash.aspx.cs">
       <DependentUpon>ShopCash.aspx</DependentUpon>
@@ -240,33 +242,40 @@
     <Compile Include="aspx\ShopCash.aspx.designer.cs">
       <DependentUpon>ShopCash.aspx</DependentUpon>
     </Compile>
-    <Compile Include="aspx\BSAcc.aspx.cs">
-      <DependentUpon>BSAcc.aspx</DependentUpon>
+    <Compile Include="bgAspx\BGAcc.aspx.cs">
+      <DependentUpon>BGAcc.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="aspx\BSAcc.aspx.designer.cs">
-      <DependentUpon>BSAcc.aspx</DependentUpon>
+    <Compile Include="bgAspx\BGAcc.aspx.designer.cs">
+      <DependentUpon>BGAcc.aspx</DependentUpon>
     </Compile>
-    <Compile Include="aspx\BSLogin.aspx.cs">
-      <DependentUpon>BSLogin.aspx</DependentUpon>
+    <Compile Include="bgAspx\BGLogin.aspx.cs">
+      <DependentUpon>BGLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="aspx\BSLogin.aspx.designer.cs">
-      <DependentUpon>BSLogin.aspx</DependentUpon>
+    <Compile Include="bgAspx\BGLogin.aspx.designer.cs">
+      <DependentUpon>BGLogin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="aspx\BSOrder.aspx.cs">
-      <DependentUpon>BSOrder.aspx</DependentUpon>
+    <Compile Include="bgAspx\BGOrder.aspx.cs">
+      <DependentUpon>BGOrder.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="aspx\BSOrder.aspx.designer.cs">
-      <DependentUpon>BSOrder.aspx</DependentUpon>
+    <Compile Include="bgAspx\BGOrder.aspx.designer.cs">
+      <DependentUpon>BGOrder.aspx</DependentUpon>
     </Compile>
-    <Compile Include="aspx\BSProd.aspx.cs">
-      <DependentUpon>BSProd.aspx</DependentUpon>
+    <Compile Include="bgAspx\BGProd.aspx.cs">
+      <DependentUpon>BGProd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="aspx\BSProd.aspx.designer.cs">
-      <DependentUpon>BSProd.aspx</DependentUpon>
+    <Compile Include="bgAspx\BGProd.aspx.designer.cs">
+      <DependentUpon>BGProd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bgAspx\BGUser.aspx.cs">
+      <DependentUpon>BGUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bgAspx\BGUser.aspx.designer.cs">
+      <DependentUpon>BGUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

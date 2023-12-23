@@ -62,8 +62,7 @@ function Sumbtion() {
 
         success: function (data) {
             if (data.status === 0) {
-                alert("成功");
-                window.location.href = "User.aspx";
+                alert("非預期錯誤");
 
             } else if (data.status === 1) {
                 alert("密碼必須相同");
@@ -73,6 +72,10 @@ function Sumbtion() {
                 alert("密碼不可與原密碼相似");
                 $('#Pwd1').val('');
                 $('#Pwd2').val('');
+
+            } else if (data.status === 1024) {
+                alert("密碼修改成功");
+                window.location.href = "User.aspx";
             } 
         },
 
@@ -82,23 +85,8 @@ function Sumbtion() {
     });
 };
 
-/* 正確的測試帳密
-
-$('#acc').val('a12');
+/*
 $('#pwd1').val('a123546A');
 $('#pwd2').val('a123546A');
-$('#mail').val('12@21.com');
-$('#phone').val('0912345678');
-
 */
-
-/*不正確的測試帳密
-
-$('#acc').val('a');
-$('#pwd1').val('a1235A');
-$('#pwd2').val('a12345A');
-$('#mail').val('12');
-$('#phone').val('0718345678');
-
- */
 

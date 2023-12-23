@@ -11,7 +11,7 @@ namespace ShoppingMall.aspx
 {
 
 
-    public partial class Home
+    public partial class BGUser
     {
     }
 }

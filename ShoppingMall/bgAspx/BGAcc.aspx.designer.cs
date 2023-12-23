@@ -11,7 +11,7 @@ namespace ShoppingMall.aspx
 {
 
 
-    public partial class BSLogin
+    public partial class BGAcc
     {
     }
 }

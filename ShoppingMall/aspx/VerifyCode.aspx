@@ -38,7 +38,7 @@
             <p>請輸入信箱收到的六位數驗證碼：</p>
             <p><input type = "email"id = "vfyCode" placeholder = "ex.123456" oninput = "NumInput(this)" onblur = "NumBlur(event)" maxlength = "6"/></p>
             <div><input value = "確認" id = "btnAllSub" onclick = "Sumbtion()" />
-                <a href = "ResetPwd.aspx">重新發送驗證碼</a>
+                <span class ="txbAllInputBoxBtn" onclick = "">重新發送驗證碼</span>
             </div>     
         </div>
             

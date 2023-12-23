@@ -1,9 +1,9 @@
 ﻿
 $(document).on('click', '#sortButton', function () {
-    sortTable();
+    SortTable();
 });
 
-function sortTable() {
+function SortTable() {
     var table = $('th').parents('table').eq(0);
     var rows = table.find('tr:gt(0)').toArray().sort(comparer($('th').index()));
     $('th')[0].asc = !$('th')[0].asc;
@@ -26,44 +26,44 @@ function getCellValue(row, index) {
     return $(row).children('td').eq(index).text();
 }
 
-function DisplayData(data) {
+function DisplayData(data) {  //response
     data = data || {
         list: [
             {
                 id: 0,
                 name: '',
                 acc: '123',
-                email: '',
-                phone: '',
+                email: '19@19.com',
+                phone: '0962315875',
                 address: '',
-                level: '',
+                level: '一般',
                 limit: false,
-                createTime: '',
-                lastTime: ''
+                createTime: '112/12/6 23:00:16',
+                lastTime: '112/12/18 7:05:26'
             },
             {
                 id: 1,
                 name: '',
                 acc: '123',
-                email: '',
-                phone: '',
+                email: '11@10.com',
+                phone: '0963215879',
                 address: '',
-                level: '',
+                level: '一般',
                 limit: false,
-                createTime: '',
-                lastTime: ''
+                createTime: '112/12/10 20:00:06',
+                lastTime: '112/12/19 6:00:06'
             },
             {
                 id: 2,
-                name: '',
+                name: '小名',
                 acc: '123',
-                email: '',
-                phone: '',
-                address: '',
-                level: '',
+                email: '12@12.com',
+                phone: '0963215874',
+                address: '台北市中正路22222號',
+                level: 'vip',
                 limit: false,
-                createTime: '',
-                lastTime: ''
+                createTime: '112/12/1 7:00:06',
+                lastTime: '112/12/22 19:00:31'
             }
         ]
     }
@@ -76,7 +76,7 @@ DisplayData();
 //    url: "/ajax/Member.aspx",
 //    method: "POST",
 //    data: {
-//        method: 'bsuser',
+//        method: 'BGuser',
 //        name: name,
 //        acc: acc,
 //        mail: mail,
