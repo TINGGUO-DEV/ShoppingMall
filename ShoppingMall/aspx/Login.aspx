@@ -2,7 +2,10 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <script src = "../js/Login.js" type = "text/javascript"></script>
+<<<<<<< HEAD
     <title>登入</title>
+=======
+>>>>>>> ea628f42281c1ed9b4b26a0c318809652c0e78e3
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">    
