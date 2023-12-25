@@ -12,8 +12,7 @@ function SortTable() {
     }
     table.children('tbody').empty().html(rows);
 }
-
-function comparer(index) {
+function Comparer(index) {
     return function (a, b) {
         var valA = getCellValue(a, index),
             valB = getCellValue(b, index);
@@ -21,8 +20,7 @@ function comparer(index) {
             valA - valB : valA.localeCompare(valB);
     };
 }
-
-function getCellValue(row, index) {
+function GetCellValue(row, index) {
     return $(row).children('td').eq(index).text();
 }
 
@@ -71,6 +69,25 @@ function DisplayData(data) {  //response
 }
 
 DisplayData();
+
+// 使用假數據代替 AJAX 請求
+const fakeData = [
+    { value: 'asd123' },
+    { value: '2023/12/15 21:05:31' },
+    { value: '最高管理員' },
+    { value: '否' },
+    { value: '' }
+];
+
+// 獲取 ul 元素
+const dataContainer = document.getElementById('CallBackData');
+
+// 使用 forEach 遍歷數據並插入 li 元素
+fakeData.forEach(item => {
+    const li = document.createElement('li');
+    li.textContent = item.value;
+    dataContainer.appendChild(li);
+});
 
 //$.ajax({
 //    url: "/ajax/Member.aspx",

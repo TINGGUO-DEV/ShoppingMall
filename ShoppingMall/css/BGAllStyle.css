@@ -184,3 +184,48 @@ img.sort {
     height: 30px;
     cursor: pointer;
 }
+
+.abc ul {
+    display: flex;
+    list-style: none; /* 移除默认的列表样式 */
+    padding: 0; /* 移除默认的内边距 */
+    margin: 0; /* 移除默认的外边距 */
+    display: flex;
+    justify-content: center;
+}
+
+.abc a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.abc li {
+    margin: -2px -5px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ccc;
+}
+
+.abc .column li {
+    height: 60px;
+    width: 200px;
+    background-color: #f3f3f3;
+}
+
+    .abc .column li.column-1 {
+        width: 100px;
+    }
+
+    .abc .column li.column-2 {
+        width: 200px;
+    }
+
+    .abc .column li.column-3 {
+        width: 120px;
+    }
+
+    .abc .column li.column-4 {
+        width: 80px;
+    }

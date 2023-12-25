@@ -64,6 +64,18 @@
                             <tr>
                      
                             </tr>
+                             <div class="abc">
+         <ul class="column">
+             <li>帳號</li>
+             <li>建立時間</li>
+             <li>權限</li>
+             <li>停權</li>
+             <li>備註</li>
+         </ul>
+         <ul class="column" id="CallBackData">
+           <!-- Dynamic data will be inserted here -->
+         </ul>
+       </div>
                         </tbody>
                     </table>
                 </div>
