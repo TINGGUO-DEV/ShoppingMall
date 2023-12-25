@@ -41,7 +41,7 @@
                 <p><span>密碼確認：</span>
                     <input type = "password" id = "pwd2" oninput = "PwdInput(this)" placeholder = "請再輸入一次密碼" onblur = "Pwd2Blur(event)" title = "請確認您輸入的密碼是否與上一列設定的密碼相同" maxlength = "20"/>
                     <img class = "togCursor" src = "../image/icons/eye-close.png" alt = "Hide Password" onclick = "PasswordEye(this)"/></p>
-                <div><input value = "確認修改" id = "btnAllSub" onclick = "Sumbtion()"/></div>
+                <div><input value = "確認" id = "btnAllSub" onclick = "Sumbtion()"/></div>
             </div>
         </div>
 </body>

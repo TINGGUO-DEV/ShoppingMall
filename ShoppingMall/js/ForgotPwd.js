@@ -28,7 +28,7 @@ $.ajax({
     method: "POST",
     data: {
         method: 'verifyCode',
-        mail: mail,
+        mail: 'mail',
     },
     dataType: 'json',
 

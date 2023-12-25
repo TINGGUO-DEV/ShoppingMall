@@ -20,7 +20,7 @@ public partial class Member : BasePage
         CheckAjaxRequest();
 
         string method = Request.Form["method"]; //不需去除空白
-        method = "register";
+    
         switch (method)
         {
             case "register":
@@ -139,7 +139,7 @@ public partial class Member : BasePage
         string pwd = Request.Form["pwd"] == null ? null : Request.Form["pwd"].Trim();
 
         //驗證帳號&密碼
-        if (ValidAccount(acc) || ValidPwd(pwd))
+        if (!ValidAccount(acc) || !ValidPwd(pwd))
         {
             result += 1;
         }

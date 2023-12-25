@@ -28,6 +28,22 @@ function PwdBlur(e) {
     }
 }
 
+function RemAtts() {
+    var count = 0;
+
+    for (var i = 0; i < data.length; i++) {
+        if (data[i].status === 1) {
+            count++;
+        }
+    }
+
+    var remAtts = 3 - count;
+
+    if (remAtts > 0 && remAtts <3) {
+        alert("帳號or密碼錯誤，您還有" + remAtts + "次的登入機會，若不確定密碼建議點選忘記密碼進行密碼重設");
+    }
+}
+
 function Sumbtion() {
     var acc = $('#acc').val();
     var pwd = $('#pwd').val();
@@ -56,9 +72,10 @@ function Sumbtion() {
                 alert("非預期錯誤");
 
             } else if (data.status === 1) {
-                alert("帳號or密碼錯誤");
+                RemAtts();
                 $('#acc').val('');
                 $('#pwd').val('');
+
 
             } else if (data.status === 2) {
                 alert("已封鎖");

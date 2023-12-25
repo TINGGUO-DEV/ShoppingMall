@@ -153,12 +153,39 @@ function Sumbtion() {
 
             } else if (data.status === 1024) {
                 alert("註冊成功");
-                window.location.href = "VerifyCode.aspx";
+
+                $.ajax({
+                    url: "/ajax/Member.aspx",
+                    method: "POST",
+                    data: {
+                        method: 'authVerifyCode',
+                        mail: mail,
+                    },
+                    dataType: 'json',
+
+                    success: function (data) {      //response
+                        if (data.status === 0) {
+                            alert("非預期錯誤");
+
+                        } else if (data.status & 1 == 1) {
+                            alert("信箱格式錯誤");
+                            $('#acc').val('');
+
+                        } else if (data.status === 1024) {
+                            alert("成功發送驗證碼");
+                            window.location.href = "VerifyCode.aspx";
+                        }
+                    }, 
+
+                    error: function () {
+                        alert("驗證碼發送失敗，請稍後重試或聯繫客服");
+                    }
+                });
             }
         },
 
         error: function () {
-            alert("登入失敗，請稍後重試或聯繫客服");
+            alert("註冊失敗，請稍後重試或聯繫客服");
         }
     });
 };

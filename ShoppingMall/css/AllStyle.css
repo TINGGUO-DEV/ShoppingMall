@@ -227,7 +227,7 @@
 /*文字提示小彈窗*/
 .popUpBox {
     display: none;
-    position: aBGolute;
+    position: absolute;
     background-color: #003E3E;
     width: 230px;
     height: 40px;
@@ -245,7 +245,7 @@
 /*icon下會員小彈窗*/
 .popUpIcons {
     display: none;
-    position: aBGolute;
+    position: absolute;
     background-color: #003E3E;
     width: 120px;
     height: 100px;
@@ -277,7 +277,7 @@
     border-radius: 10px;
     background-color: white;
     border: 2px solid #003E3E;
-    position: aBGolute;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

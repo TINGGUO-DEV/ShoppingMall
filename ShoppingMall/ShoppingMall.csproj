@@ -107,13 +107,13 @@
     <Content Include="bgAspx\BGOrder.aspx" />
     <Content Include="bgAspx\BGProd.aspx" />
     <Content Include="bgAspx\BGUser.aspx" />
-    <Content Include="bgJs\BSAcc.js" />
-    <Content Include="bgJs\BSAllJs.js" />
-    <Content Include="bgJs\BSLogin.js" />
-    <Content Include="bgJs\BSOrder.js" />
-    <Content Include="bgJs\BSPopUp.js" />
-    <Content Include="bgJs\BSProd.js" />
-    <Content Include="bgJs\BSUser.js" />
+    <Content Include="bgJs\BGAcc.js" />
+    <Content Include="bgJs\BGAllJs.js" />
+    <Content Include="bgJs\BGLogin.js" />
+    <Content Include="bgJs\BGOrder.js" />
+    <Content Include="bgJs\BGPopUp.js" />
+    <Content Include="bgJs\BGProd.js" />
+    <Content Include="bgJs\BGUser.js" />
     <Content Include="css\AllStyle.css" />
     <Content Include="css\BGAllStyle.css" />
     <Content Include="image\banners\Banner1.jpg" />
@@ -178,6 +178,10 @@
     </Compile>
     <Compile Include="aspx\FavProd.aspx.designer.cs">
       <DependentUpon>FavProd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aspx\Frame.Master.cs">
+      <DependentUpon>Frame.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="aspx\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
@@ -277,9 +281,18 @@
     <Compile Include="bgAspx\BGUser.aspx.designer.cs">
       <DependentUpon>BGUser.aspx</DependentUpon>
     </Compile>
+    <Compile Include="bgAspx\BGFrame.Master.cs">
+      <DependentUpon>BGFrame.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bgAspx\BGFrame.Master.designer.cs">
+      <DependentUpon>BGFrame.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="aspx\Frame.Master" />
+    <Content Include="bgAspx\BGFrame.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -288,7 +301,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="bgAjax\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
