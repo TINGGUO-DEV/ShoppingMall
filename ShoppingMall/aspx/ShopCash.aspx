@@ -5,6 +5,9 @@
     <script src = "../js/AllProd.js" type = "text/javascript"></script>
 </asp:Content>
 
+<asp:Content ContentPlaceHolderID="Title" Runat="Server">
+    <div id = "labAllWebTitle">購物金</div>
+</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div id = "mbrContainer">
         <div id = "mbrNavContainer">

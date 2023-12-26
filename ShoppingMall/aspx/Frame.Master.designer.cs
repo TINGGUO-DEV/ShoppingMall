@@ -7,11 +7,13 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace ShoppingMall.aspx {
-    
-    
-    public partial class Frame {
-        
+namespace ShoppingMall.aspx
+{
+
+
+    public partial class Frame
+    {
+
         /// <summary>
         /// head 控件。
         /// </summary>
@@ -20,7 +22,16 @@ namespace ShoppingMall.aspx {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
-        
+
+        /// <summary>
+        /// Title 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder Title;
+
         /// <summary>
         /// ContentPlaceHolder1 控件。
         /// </summary>
