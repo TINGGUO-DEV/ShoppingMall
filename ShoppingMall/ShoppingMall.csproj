@@ -183,12 +183,9 @@
       <DependentUpon>Frame.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-<<<<<<< HEAD
-=======
     <Compile Include="aspx\Frame.Master.designer.cs">
       <DependentUpon>Frame.Master</DependentUpon>
     </Compile>
->>>>>>> ea628f42281c1ed9b4b26a0c318809652c0e78e3
     <Compile Include="aspx\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -298,10 +295,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="aspx\Frame.Master" />
-<<<<<<< HEAD
     <Content Include="bgAspx\BGFrame.Master" />
-=======
->>>>>>> ea628f42281c1ed9b4b26a0c318809652c0e78e3
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
