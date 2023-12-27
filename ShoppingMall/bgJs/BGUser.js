@@ -14,14 +14,20 @@ function Comparer(index) {
     return function (a, b) {
         var valA = getCellValue(a, index),       //index為取a所在的行數
             valB = getCellValue(b, index);
-        return $.isNumeric(valA) && $.isNumeric(valB) ?  //$.isNumeric() 函数用于判断指定参数是否是一个数字值。只有接收number类型的参数,或者是可以被强制为有限数值的 string类型的参数时，才会返回true，否则返回false。
-            valA - valB : valA.localeCompare(valB);
+
+        var timestampA = Date.parse(valA);
+        var timestampB = Date.parse(valB);
+
+        return $.isNumeric(timestampA) && $.isNumeric(timestampB) ?  //$.isNumeric() 函数用于判断指定参数是否是一个数字值。只有接收number类型的参数,或者是可以被强制为有限数值的 string类型的参数时，才会返回true，否则返回false。
+            timestampA - timestampB : timestampA.localeCompare(timestampB);
     };
 }
 
 function GetCellValue(row, index) {             //row所在的行數
     return $(row).children('td').eq(index).text();     //(row).children = 包含在row裡面的所有為td的子元素  eq的行數為Comparer() 
 }
+
+
 
 function DisplayData(data) {  //response
     data = data || {
@@ -87,9 +93,15 @@ function DisplayData(data) {  //response
 
 $(document).ready(function () {
 
-    $('#sortButton').on('click', function () {
-        SortTable();
-    })
+    $('#btnSort').on('click', function () {
+        var selectedOption = $('#sortSelect').val();
+
+        if (selectedOption === "建立時間") {
+            SortTable(8);
+
+        } else if (selectedOption === "最後登入時間")
+            SortTable(9);
+    });
     
     DisplayData();
 });
@@ -98,15 +110,6 @@ $(document).ready(function () {
 //$(document).on('click', '#sortButton', function () {
 //    SortTable();
 //});
-
-//// 使用假數據代替 AJAX 請求
-//const fakeData = [
-//    { value: 'asd123' },
-//    { value: '2023/12/15 21:05:31' },
-//    { value: '最高管理員' },
-//    { value: '否' },
-//    { value: '' }
-//];
 
 //// 獲取 ul 元素
 //const dataContainer = document.getElementById('CallBackData');
