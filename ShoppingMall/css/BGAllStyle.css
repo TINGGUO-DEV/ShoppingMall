@@ -149,24 +149,23 @@
             height: auto;
         }
 
-.TableStyle {
-    overflow: hidden;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
+.tableContainer {
+    margin-left: 300px;
+    margin-right: 250px;
+    margin-top: 40px;
 }
 
 table {
     width: 90%;
     border-spacing: 0; /*間距*/
-    border: 1px solid #6b675d;
+    border: 1px solid #f3f3f3;
 }
 
 th, td { /*欄寬,欄高,置中,線條*/
     width: 120px;
     height: 40px;
     text-align: center;
-    border: 0.5px solid #6b675d;
+    border: 0.5px solid #f3f3f3;
 }
 
 th { /*標頭*/
@@ -179,53 +178,15 @@ td { /*列*/
     background-color: #f3f3f3;
 }
 
+.sortItem {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 120px;
+    margin-bottom: 8px;
+}
+
 img.sort {
     width: 30px;
     height: 30px;
     cursor: pointer;
 }
-
-.abc ul {
-    display: flex;
-    list-style: none; /* 移除默认的列表样式 */
-    padding: 0; /* 移除默认的内边距 */
-    margin: 0; /* 移除默认的外边距 */
-    display: flex;
-    justify-content: center;
-}
-
-.abc a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.abc li {
-    margin: -2px -5px;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid #ccc;
-}
-
-.abc .column li {
-    height: 60px;
-    width: 200px;
-    background-color: #f3f3f3;
-}
-
-    .abc .column li.column-1 {
-        width: 100px;
-    }
-
-    .abc .column li.column-2 {
-        width: 200px;
-    }
-
-    .abc .column li.column-3 {
-        width: 120px;
-    }
-
-    .abc .column li.column-4 {
-        width: 80px;
-    }

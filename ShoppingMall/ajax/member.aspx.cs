@@ -13,8 +13,6 @@ using System.Text.RegularExpressions;
 
 public partial class Member : BasePage
 {
-    //private UserInfo userInfo = null;
-
     protected void Page_Load(object sender, EventArgs e)
     {
         CheckAjaxRequest();
@@ -37,6 +35,9 @@ public partial class Member : BasePage
                 break;
             case "resetPwd":
                 ResetPwd();
+                break;
+            case "changeInfo":
+                UpdateUserInfo();
                 break;
             default:
                 //do nothing
@@ -150,21 +151,40 @@ public partial class Member : BasePage
             string md5Pwd = Md5Encode(pwd);
             string sId = Session.SessionID;
 
-            SqlCommand cmd = new SqlCommand(); //宣告SqlCommand物件
-            cmd.Connection = new SqlConnection(this.ConnStr); //設定連線字串
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = new SqlConnection(this.ConnStr);
+            SqlDataAdapter da = new SqlDataAdapter(); 
+            DataTable dt = new DataTable();
 
             try
             {
                 cmd.CommandText = "EXEC pro_fr_loginMember @acc, @pwd, @sId";
 
-                //參數化查詢條件，可以有效防止SQL injection(資料隱碼攻擊)
                 cmd.Parameters.Add("@acc", SqlDbType.VarChar).Value = acc;
                 cmd.Parameters.Add("@pwd", SqlDbType.Char).Value = md5Pwd;
                 cmd.Parameters.Add("@sId", SqlDbType.Char).Value = sId;
 
                 cmd.Connection.Open(); //開啟資料庫連線
 
-                int.TryParse(cmd.ExecuteScalar().ToString(), out result); //執行並取回資料
+                da.SelectCommand = cmd; //執行
+                da.Fill(dt); //結果存放至DataTable
+
+                cmd.Connection.Close(); //關閉連線
+
+                int.TryParse(dt.Rows[0][0].ToString(), out result);
+
+                if (result == 1024)
+                {
+                    //紀錄登入狀態
+                    userInfo = new UserInfo()
+                    {
+                        userId = int.Parse(dt.Rows[0]["f_userId"].ToString()),
+                        userAcc = acc,
+                        level = int.Parse(dt.Rows[0]["f_level"].ToString()),
+                        balance = int.Parse(dt.Rows[0]["f_balance"].ToString())
+                    };
+                    Session["UserInfo"] = userInfo;
+                }
             }
             catch (Exception e) 
             {
@@ -175,7 +195,9 @@ public partial class Member : BasePage
             finally
             {
                 cmd.Parameters.Clear();
-                cmd.Connection.Close();
+                //判斷是否已關閉
+                if (cmd.Connection.State != ConnectionState.Closed)
+                    cmd.Connection.Close();
             }
         }
 
@@ -246,7 +268,7 @@ public partial class Member : BasePage
         string vfyCode = Request.Form["vfyCode"];
 
 
-        if (new Regex("\\d{6}").IsMatch(vfyCode) == false)
+        if (string.IsNullOrEmpty(vfyCode) || new Regex("\\d{6}").IsMatch(vfyCode) == false)
         {
             result += 1;
         }
@@ -321,6 +343,79 @@ public partial class Member : BasePage
                 int.TryParse(cmd.ExecuteScalar().ToString(), out result); //執行並取回資料
             }
             catch (Exception e)
+            {
+                //紀錄日誌
+                //NLog.Write("register", e.Message);
+                result = 0;
+            }
+            finally
+            {
+                cmd.Parameters.Clear();
+                cmd.Connection.Close();
+            }
+        }
+
+        Response.Write("{\"status\": " + result + "}");
+    }
+
+    /// <summary>
+    /// 更新會員基本資料
+    /// </summary>
+    private void UpdateUserInfo()
+    {
+        int result = 0;
+        //未登入直接返回
+        if (userInfo == null)
+        {
+            Response.Write("{\"status\": " + result + "}");
+        }
+
+        string name = Request.Form["name"];
+        string address = Request.Form["address"];
+        string mail = Request.Form["mail"];
+        string phone = Request.Form["phone"];
+
+        //驗證姓名
+        if (string.IsNullOrEmpty(name) || name.Length > 10)
+        {
+            result += 1;
+        }
+        //驗證地址
+        if (string.IsNullOrEmpty(address) || address.Length > 100)
+        {
+            address += 2;
+        }
+        //驗證信箱
+        if (ValidMail(mail) == false)
+        {
+            result += 4;
+        }
+        //驗證手機
+        if (string.IsNullOrEmpty(phone) || new Regex("^[09]\\d{8}").IsMatch(phone) == false)
+        {
+            result += 8;
+        }
+
+        if (result == 0)
+        {
+            SqlCommand cmd = new SqlCommand(); 
+            cmd.Connection = new SqlConnection(this.ConnStr);
+
+            try
+            {
+                cmd.CommandText = "EXEC pro_fr_editMember @userId, @name, @address, @mail, @phone";
+
+                cmd.Parameters.Add("@userId", SqlDbType.Int).Value = userInfo.userId;
+                cmd.Parameters.Add("@name", SqlDbType.NVarChar).Value = name;
+                cmd.Parameters.Add("@address", SqlDbType.NVarChar).Value = address;
+                cmd.Parameters.Add("@mail", SqlDbType.VarChar).Value = mail;
+                cmd.Parameters.Add("@phone", SqlDbType.Char).Value = phone;
+
+                cmd.Connection.Open(); 
+
+                int.TryParse(cmd.ExecuteScalar().ToString(), out result);
+            }
+            catch (Exception e) 
             {
                 //紀錄日誌
                 //NLog.Write("register", e.Message);

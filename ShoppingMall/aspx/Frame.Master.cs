@@ -11,6 +11,12 @@ namespace ShoppingMall.aspx
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //有登入狀態
+            if (Session["UserInfo"] != null && Session["UserInfo"].GetType().Name == "UserInfo")
+            {
+                UserInfo userInfo = Session["UserInfo"] as UserInfo;
+                labUser.Text = userInfo.userId.ToString();
+            }
 
         }
     }

@@ -7,7 +7,7 @@ function CashBlur(e) {
     var target = e.currentTarget;
     var value = target.value;
 
-    if (value >= 300 && value<=50000) {
+    if (value >= 300 && value <= 50000) {
         target.style.borderColor = "green";
     } else {
         target.style.borderColor = "red";
@@ -17,7 +17,7 @@ function CashBlur(e) {
 function Sumbtion() {
     var orderId = $('#orderId').val();
 
-    if (orderId < 300 || orderId>50000) {
+    if (orderId < 300 || orderId > 50000) {
         alert('儲值請大於300並小於50000');
         return;
     }

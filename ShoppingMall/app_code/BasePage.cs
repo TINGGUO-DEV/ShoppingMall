@@ -18,6 +18,11 @@ using System.Text;
 public class BasePage : System.Web.UI.Page
 {
     /// <summary>
+    /// 會員資料
+    /// </summary>
+    protected UserInfo userInfo = null;
+
+    /// <summary>
     /// 取得連線字串
     /// </summary>
     protected string ConnStr
@@ -28,7 +33,7 @@ public class BasePage : System.Web.UI.Page
     /// <summary>
     /// 建構子
     /// </summary>
-	public BasePage()
+    public BasePage()
     {
         //添加初始事件
         this.Init += new EventHandler(BasePage_Init);
@@ -38,7 +43,10 @@ public class BasePage : System.Web.UI.Page
     private void BasePage_Init(object sender, EventArgs e)
     {
         //這邊通常會有會員登入狀態的判斷
-
+        if (Session["UserInfo"] != null && Session["UserInfo"].GetType().Name == "UserInfo")
+        {
+            UserInfo userInfo = Session["UserInfo"] as UserInfo;
+        }
         //或者是語系檔判斷
 
         //或是其它的判斷
