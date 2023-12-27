@@ -21,3 +21,18 @@ function ClosePopUp(popUpId) {
     var popUp = document.getElementById(popUpId);
     popUp.style.display = "none";
 }
+
+function Sort() {
+
+    if (click) {
+            sortTable();
+            sor.src = "../image/icons/cil-sort-ascending.png";
+            sor.alt = "編號由下往上";
+
+    } else {
+            sortTable();
+            sort.src = "../image/icons/cil-sort-descending.png";
+            sort.alt = "編號由上往下";
+
+    }                 
+}

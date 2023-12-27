@@ -179,14 +179,6 @@ td { /*列*/
     background-color: #f3f3f3;
 }
 
-th.sort{
-    width:auto;
-}
-
-.sortContainer {
-    display: flex;
-}
-
 img.sort {
     width: 30px;
     height: 30px;
