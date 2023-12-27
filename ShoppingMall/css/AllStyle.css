@@ -1,4 +1,6 @@
-﻿
+﻿.none {
+    display: none;
+}
 #labAllWebTitle {                     
     font-size: 40px;
     margin-top: 40px;
