@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <title>查詢購物金</title>
     <script src = "../js/AllProd.js" type = "text/javascript"></script>
+    <script src = "../js/ShopCash.js" type = "text/javascript"></script>
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="Title" Runat="Server">

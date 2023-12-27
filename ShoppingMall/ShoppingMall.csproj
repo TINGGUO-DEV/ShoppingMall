@@ -148,7 +148,7 @@
     <Compile Include="ajax\Member.aspx.designer.cs">
       <DependentUpon>Member.aspx</DependentUpon>
     </Compile>
-    <Compile Include="appCode\BasePage.cs">
+    <Compile Include="app_code\BasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="app_code\UserInfo.cs" />
