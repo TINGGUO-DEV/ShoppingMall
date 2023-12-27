@@ -364,6 +364,11 @@ public partial class Member : BasePage
     private void UpdateUserInfo()
     {
         int result = 0;
+        //未登入直接返回
+        if (userInfo == null)
+        {
+            Response.Write("{\"status\": " + result + "}");
+        }
 
         string name = Request.Form["name"];
         string address = Request.Form["address"];
@@ -398,8 +403,9 @@ public partial class Member : BasePage
 
             try
             {
-                cmd.CommandText = "EXEC pro_fr_editMember @name, @address, @mail, @phone";
+                cmd.CommandText = "EXEC pro_fr_editMember @userId, @name, @address, @mail, @phone";
 
+                cmd.Parameters.Add("@userId", SqlDbType.Int).Value = userInfo.userId;
                 cmd.Parameters.Add("@name", SqlDbType.NVarChar).Value = name;
                 cmd.Parameters.Add("@address", SqlDbType.NVarChar).Value = address;
                 cmd.Parameters.Add("@mail", SqlDbType.VarChar).Value = mail;
