@@ -7,6 +7,6 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div id = "homeBannerImage"><img src = "../image/banners/banner1.jpg" /></div>
-    <div id = "allSubTitle">Welcome to our online shopping weBGite</div>
+    <div id = "labAllfooter">Welcome to our online shopping weBGite</div>
 </asp:Content>
 

@@ -16,11 +16,10 @@
     color: #888888;
 }
 
-#btnAllSub {                          
+#btnAllSub {
     width: 130px;
     height: 45px;
     font-size: 20px;
-    color: #ffffff;
     background-color: #64A600;
     font-weight: 700;
     margin-top: 20px;
@@ -28,6 +27,9 @@
     border: none;
     cursor: pointer;
     text-align: center;
+    color: transparent;
+    text-shadow: 0 0 0 #ffffff;
+    outline: none;
 }
     #btnAllSub:hover {                 
         background-color: red;
@@ -45,10 +47,14 @@
     margin-top: 20px;
     margin-right: 20px;
     margin-left: 10px;
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+    outline: none;
 }
     #btnAllSubCancel:hover {
         background-color: red;
-        color: #ffffff;
+        color: transparent;
+        text-shadow: 0 0 0 #ffffff;
         border: red;
     }
 

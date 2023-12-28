@@ -2,11 +2,10 @@
     display:flex;
 }
 
-.btnBGAllSub1 { 
+.btnBGAllSub1 {
     width: 130px;
     height: 45px;
     font-size: 20px;
-    color: #ffffff;
     background-color: #64A600;
     font-weight: 700;
     margin-top: 20px;
@@ -14,6 +13,9 @@
     border: none;
     cursor: pointer;
     text-align: center;
+    color: transparent;
+    text-shadow: 0 0 0 #ffffff;
+    outline:none;
 }
 
     .btnBGAllSub1:hover { 
