@@ -5,6 +5,8 @@
 */
 #endregion
 
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -33,11 +35,17 @@ public partial class Member : BasePage
             case "authVerifyCode":
                 AuthMemberMail();
                 break;
+            case "RequestResetPwd":
+                SendResetPwdToken();
+                break;
             case "resetPwd":
                 ResetPwd();
                 break;
+            case "getUserData":
+                GetUserData();
+                break;
             case "changeInfo":
-                UpdateUserInfo();
+                UpdateUserData();
                 break;
             default:
                 //do nothing
@@ -306,6 +314,60 @@ public partial class Member : BasePage
     }
 
     /// <summary>
+    /// 發送密碼重置
+    /// </summary>
+    private void SendResetPwdToken()
+    {
+        int result = 0;
+
+        string mail = Request.Form["mail"];
+
+        //驗證信箱
+        if (ValidMail(mail) == false)
+        {
+            result += 1;
+        }
+
+        if (result == 0)
+        {
+            string token = RandomToken();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = new SqlConnection(this.ConnStr);
+
+            try
+            {
+                cmd.CommandText = "EXEC pro_fr_addResetPwdToken @mail, @token";
+                cmd.Parameters.Add("@mail", SqlDbType.VarChar).Value = mail;
+                cmd.Parameters.Add("@token", SqlDbType.Char).Value = token;
+
+                cmd.Connection.Open();
+                int.TryParse(cmd.ExecuteScalar().ToString(), out result);
+            }
+            catch (Exception e)
+            {
+                //NLog.Write("register", e.Message);
+                result = 0;
+            }
+            finally
+            {
+                cmd.Parameters.Clear();
+                cmd.Connection.Close();
+            }
+        }
+
+        Response.Write("{\"status\": " + result + "}");
+    }
+
+    /// <summary>
+    /// 亂數生成Token
+    /// </summary>
+    /// <returns>token</returns>
+    private string RandomToken()
+    {
+        return Md5Encode(Guid.NewGuid().ToString());
+    }
+
+    /// <summary>
     /// 重置密碼
     /// </summary>
     private void ResetPwd()
@@ -359,15 +421,82 @@ public partial class Member : BasePage
     }
 
     /// <summary>
+    /// 取得會員基本資料
+    /// </summary>
+    private void GetUserData()
+    {
+        JObject json = new JObject() { { "status", 0 }, { "data", new JObject() } };
+
+        //未登入直接返回
+        if (userInfo != null)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = new SqlConnection(this.ConnStr);
+            SqlDataAdapter da = new SqlDataAdapter();
+            DataTable dt = new DataTable();
+
+            try
+            {
+                cmd.CommandText = "EXEC pro_fr_getUserData @userId";
+
+                cmd.Parameters.Add("@userId", SqlDbType.Int).Value = userInfo.userId;
+
+                cmd.Connection.Open(); 
+
+                da.SelectCommand = cmd; 
+                da.Fill(dt);
+
+                cmd.Connection.Close();
+
+
+                if (dt.Rows.Count > 0)
+                {
+                    int result = 0;
+                    int.TryParse(dt.Rows[0][0].ToString(), out result);
+                    if (result == 1024)
+                    {
+                        json["status"] = result;
+                        json["data"] = new JObject()
+                        {
+                            { "acc" , userInfo.userAcc },
+                            { "name" , dt.Rows[0]["f_name"].ToString() },
+                            { "address" , dt.Rows[0]["f_address"].ToString() },
+                            { "mail" , dt.Rows[0]["f_mail"].ToString() },
+                            { "phone" , dt.Rows[0]["f_phone"].ToString() },
+                            { "mailCheck" , bool.Parse(dt.Rows[0]["f_mailCheck"].ToString()) }
+                        };
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                //紀錄日誌
+                //NLog.Write("register", e.Message);
+                json["status"] = 0;
+            }
+            finally
+            {
+                cmd.Parameters.Clear();
+                //判斷是否已關閉
+                if (cmd.Connection.State != ConnectionState.Closed)
+                    cmd.Connection.Close();
+            }
+        }
+
+        Response.Write(JsonConvert.SerializeObject(json));
+    }
+
+    /// <summary>
     /// 更新會員基本資料
     /// </summary>
-    private void UpdateUserInfo()
+    private void UpdateUserData()
     {
         int result = 0;
         //未登入直接返回
         if (userInfo == null)
         {
             Response.Write("{\"status\": " + result + "}");
+            return;
         }
 
         string name = Request.Form["name"];
