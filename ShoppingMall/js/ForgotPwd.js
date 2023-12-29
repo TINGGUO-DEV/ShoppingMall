@@ -21,29 +21,33 @@ function Sumbtion() {
         alert('請確認您輸入的信箱格式是否正確');
         return;
         }
-    }
 
-$.ajax({
-    url: "/ajax/Member.aspx",
-    method: "POST",
-    data: {
-        method: 'verifyCode',
-        mail: 'mail',
-    },
-    dataType: 'json',
+    $.ajax({
+        url: "/ajax/Member.aspx",
+        method: "POST",
+        data: {
+            method: 'RequestResetPwd',
+            mail: 'mail',
+        },
+        dataType: 'json',
 
-    success: function (data) {
-        if (data.status === 0) {
-            alert("驗證成功");
-            window.location.href = "VerifyCode.aspx";
+        success: function (data) {
+            if (data.status === 0) {
+                alert("非預期錯誤");
 
-        } else if (data.status === 1) {
-            alert("驗證碼錯誤，請重新發送");
-            $('#mail').val('');
-        } 
+            } else if (data.status === 1) {
+                alert("查無此信箱");
+                $('#mail').val('');
 
-    },
-    error: function () {
-        alert("發送失敗，請稍後重試或聯繫客服");
-    }
-});
+            } else if (data.status === 1024) {
+                window.location.href = "ResetPwd.aspx";
+            }
+
+        },
+
+        error: function() {
+            alert("發送失敗，請稍後重試或聯繫客服");
+        }
+
+    });
+}

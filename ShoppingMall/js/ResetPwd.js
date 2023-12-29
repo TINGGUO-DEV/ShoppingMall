@@ -1,4 +1,17 @@
-﻿
+﻿//帶參數的網址範例
+$(document).ready(function () {
+    var st = $('#labUser').text();
+
+    if (st == 999) {
+        alert('驗證通過!');
+        window.location.href = './Login.aspx';
+    } else if (st == 0) {
+        alert('尚未登入');
+    } else {
+        alert('已登入! ID:' + st);
+    }
+});
+
 function PwdInput(pwd) {
     pwd.value = pwd.value.replace(/[^a-zA-Z\d]/g, '');
 }

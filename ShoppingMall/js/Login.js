@@ -28,21 +28,31 @@ function PwdBlur(e) {
     }
 }
 
-function RemAtts() {
-    var count = 0;
+$(document).ready(function () {
+    var st = $('#labUser').text();
 
-    for (var i = 0; i < data.length; i++) {
-        if (data[i].status === 1) {
-            count++;
-        }
+    if (st == 0) {
+        alert('尚未登入');
+    } else {
+        alert('已登入! ID:' + st);
     }
+});
 
-    var remAtts = 3 - count;
+//function RemAtts() {
+//    var count = 0;
 
-    if (remAtts > 0 && remAtts <3) {
-        alert("帳號or密碼錯誤，您還有" + remAtts + "次的登入機會，若不確定密碼建議點選忘記密碼進行密碼重設");
-    }
-}
+//    for (var i = 0; i < data.length; i++) {
+//        if (data[i].status === 1) {
+//            count++;
+//        }
+//    }
+
+//    var remAtts = 3 - count;
+
+//    if (remAtts > 0 && remAtts <3) {
+//        alert("帳號or密碼錯誤，您還有" + remAtts + "次的登入機會，若不確定密碼建議點選忘記密碼進行密碼重設");
+//    }
+//}
 
 function Sumbtion() {
     var acc = $('#acc').val();
@@ -72,7 +82,7 @@ function Sumbtion() {
                 alert("非預期錯誤");
 
             } else if (data.status === 1) {
-                RemAtts();
+                alert("您輸入的帳號或密碼錯誤");
                 $('#acc').val('');
                 $('#pwd').val('');
 

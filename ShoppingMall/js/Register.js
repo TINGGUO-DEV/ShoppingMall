@@ -158,21 +158,20 @@ function Sumbtion() {
                     url: "/ajax/Member.aspx",
                     method: "POST",
                     data: {
-                        method: 'authVerifyCode',
+                        method: 'verifyCode',
                         mail: mail,
                     },
                     dataType: 'json',
 
                     success: function (data) {      //response
-                        if (data.status === 0) {
-                            alert("非預期錯誤");
+                        if (data.status === 0) {                        //非預期錯誤
+                            window.location.href = "Home.aspx";
 
-                        } else if (data.status & 1 == 1) {
-                            alert("信箱格式錯誤");
+                        } else if (data.status & 1 == 1) {             //信箱格式錯誤
                             $('#acc').val('');
+                            window.location.href = "Home.aspx";
 
-                        } else if (data.status === 1024) {
-                            alert("成功發送驗證碼");
+                        } else if (data.status === 1024) {             //成功發送驗證碼
                             window.location.href = "VerifyCode.aspx";
                         }
                     }, 

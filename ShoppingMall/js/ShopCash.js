@@ -1,6 +1,6 @@
 ﻿
 function CashInput(shopCash) {
-    shopCash.value = shopCash.value.replace(/[^\d]/g, '');
+    shopCash.value = shopCash.value.replace(/^[^1-9]|[^\d]/g, '');
 }
 
 function CashBlur(e) {
@@ -18,7 +18,7 @@ function Sumbtion() {
     var orderId = $('#orderId').val();
 
     if (orderId < 300 || orderId > 50000) {
-        alert('儲值請大於300並小於50000');
+        alert('加值金額請介於300至50000元之間');
         return;
     }
 

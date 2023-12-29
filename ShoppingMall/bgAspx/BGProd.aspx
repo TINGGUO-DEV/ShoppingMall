@@ -5,8 +5,5 @@
     <title>訂單管理</title>
 </asp:Content>
 
-<asp:Content ID="Title" ContentPlaceHolderID="Title" Runat="Server">
-    <div id = "labAllWebTitle">訂單管理</div>
-</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 </asp:Content>

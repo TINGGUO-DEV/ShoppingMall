@@ -14,6 +14,10 @@ function NumBlur(e) {
     }
 }
 
+function CancelSumbtion() {
+    window.location.href = "Home.aspx";
+}
+
 function Sumbtion() {
 
     var vfyCode = $('#vfyCode').val();
@@ -27,7 +31,7 @@ function Sumbtion() {
 
     if (vfyCode === data.vfyCode) {
         alert('信箱驗證成功');
-        window.location.href = "../aspx/Home.aspx";
+        window.location.href = "Home.aspx";
 
     } else {
         alert('驗證失敗，請重新發送驗證碼');

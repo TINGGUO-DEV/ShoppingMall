@@ -17,7 +17,10 @@ namespace ShoppingMall.aspx
                 UserInfo userInfo = Session["UserInfo"] as UserInfo;
                 labUser.Text = userInfo.userId.ToString();
             }
-
+            if (!string.IsNullOrEmpty(Request.QueryString.Get("token")) && !string.IsNullOrEmpty(Request.QueryString.Get("token")))
+            {
+                labUser.Text = "999";
+            }
         }
     }
 }

@@ -140,7 +140,7 @@ function Sumbtion() {
         },
 
         error: function () {
-            alert("登入失敗，請稍後重試或聯繫客服");
+            alert("修改失敗，請稍後重試或聯繫客服");
         }
     });
 };

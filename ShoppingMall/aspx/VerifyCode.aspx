@@ -2,7 +2,6 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <title>驗證信箱</title>
-    <script src = "../js/AllProd.js" type = "text/javascript"></script>
     <script src = "../js/VerifyCode.js" type = "text/javascript"></script>
 </asp:Content>
 
@@ -13,7 +12,9 @@
             <p><input type = "email"id = "vfyCode" placeholder = "ex.123456" oninput = "NumInput(this)" onblur = "NumBlur(event)" maxlength = "6"/></p>
             <div><input value = "確認" id = "btnAllSub" onclick = "Sumbtion()" />
                 <span class ="txbAllInputBoxBtn" onclick = "">重新發送驗證碼</span>
-            </div>     
+            </div>
+            <a href = "Home.aspx"class = "txbAllInputBoxBtn"><span>先跳過信箱驗證</span></a>
+
         </div>
             
     </div>
