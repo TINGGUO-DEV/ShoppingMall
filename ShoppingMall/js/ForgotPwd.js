@@ -27,7 +27,7 @@ function Sumbtion() {
         method: "POST",
         data: {
             method: 'RequestResetPwd',
-            mail: 'mail',
+            mail: mail,
         },
         dataType: 'json',
 

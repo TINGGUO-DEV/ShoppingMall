@@ -16,48 +16,6 @@
     color: #888888;
 }
 
-#btnAllSub {
-    width: 130px;
-    height: 45px;
-    font-size: 20px;
-    background-color: #64A600;
-    font-weight: 700;
-    margin-top: 20px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-    color: transparent;
-    text-shadow: 0 0 0 #ffffff;
-    outline: none;
-}
-    #btnAllSub:hover {                 
-        background-color: red;
-    }
-
-#btnAllSubCancel {
-    width: 128px;
-    height: 43px;
-    font-size: 20px;
-    font-weight: 700;
-    border-radius: 5px;
-    border-color: #64A600;
-    cursor: pointer;
-    text-align: center;
-    margin-top: 20px;
-    margin-right: 20px;
-    margin-left: 10px;
-    color: transparent;
-    text-shadow: 0 0 0 #000;
-    outline: none;
-}
-    #btnAllSubCancel:hover {
-        background-color: red;
-        color: transparent;
-        text-shadow: 0 0 0 #ffffff;
-        border: red;
-    }
-
 .btnAllLink {                 
     text-align: center;
     cursor: pointer;
@@ -80,34 +38,7 @@
     margin-top: 40px;
 }
 
-    .txbAllInputBox {                           
-        width: 550px;
-        text-align: left;
-        margin:50px;
-        margin-left:10%;
-    }
 
-        .txbAllInputBox input {          
-            border: 2px solid #34c2ff;
-            height: 30px;
-            width: 300px;
-            margin-bottom: 20px;
-        }
-
-        .txbAllInputBoxBtn {                
-            margin-left: 20px;
-            color: inherit;
-            cursor: pointer;
-        }
-            .txbAllInputBoxBtn:hover {
-                color: #00FFFF;
-            }
-
-        .txbAllInputBox img {
-            width: 30px;
-            height: auto;
-            filter: invert(1);  /* 暫時先用，之後要換成別的用法，目前只能在深色模式下變白色，淺色模式也會變白色，改成用svg檔，並用@madia 修改icon顏色*/
-        }
 .btnAllSml {
     width: 60px;
     height: 30px;

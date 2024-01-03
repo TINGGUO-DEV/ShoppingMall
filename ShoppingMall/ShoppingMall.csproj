@@ -106,11 +106,13 @@
     <Content Include="aspx\ForgotPwd.aspx" />
     <Content Include="aspx\ShopCash.aspx" />
     <Content Include="bgAspx\BGAcc.aspx" />
+    <Content Include="bgAspx\BGAddMenger.aspx" />
     <Content Include="bgAspx\BGLogin.aspx" />
     <Content Include="bgAspx\BGOrder.aspx" />
     <Content Include="bgAspx\BGProd.aspx" />
     <Content Include="bgAspx\BGUser.aspx" />
     <Content Include="bgJs\BGAcc.js" />
+    <Content Include="bgJs\BGAddMenger.js" />
     <Content Include="bgJs\BGAllJs.js" />
     <Content Include="bgJs\BGLogin.js" />
     <Content Include="bgJs\BGOrder.js" />
@@ -119,6 +121,7 @@
     <Content Include="bgJs\BGUser.js" />
     <Content Include="css\AllStyle.css" />
     <Content Include="css\BGAllStyle.css" />
+    <Content Include="css\ShareStyle.css" />
     <Content Include="image\banners\Banner1.jpg" />
     <Content Include="image\icons\cil-sort-ascending.png" />
     <Content Include="image\icons\cil-sort-descending.png" />
@@ -259,6 +262,13 @@
     </Compile>
     <Compile Include="bgAspx\BGAcc.aspx.designer.cs">
       <DependentUpon>BGAcc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bgAspx\BGAddMenger.aspx.cs">
+      <DependentUpon>BGAddMenger.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bgAspx\BGAddMenger.aspx.designer.cs">
+      <DependentUpon>BGAddMenger.aspx</DependentUpon>
     </Compile>
     <Compile Include="bgAspx\BGLogin.aspx.cs">
       <DependentUpon>BGLogin.aspx</DependentUpon>

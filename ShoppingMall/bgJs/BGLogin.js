@@ -42,33 +42,33 @@ function Sumbtion() {
         return;
     }
 
-    $.ajax({
-        url: "/ajax/Member.aspx",
-        method: "POST",
-        data: {
-            method: 'login',
-            acc: acc,
-            pwd: pwd,
-        },
-        dataType: 'json',
+    //$.ajax({
+    //    url: "/ajax/Member.aspx",
+    //    method: "POST",
+    //    data: {
+    //        method: 'login',
+    //        acc: acc,
+    //        pwd: pwd,
+    //    },
+    //    dataType: 'json',
 
-        success: function (data) {
-            if (data.status === 0) {
-                alert("成功登入");
-                window.location.href = "AllProd.aspx";
+    //    success: function (data) {
+    //        if (data.status === 0) {
+    //            alert("成功登入");
+    //            window.location.href = "AllProd.aspx";
 
-            } else if (data.status === 1) {
-                alert("帳號or密碼錯誤");
-                $('#acc').val('');
-                $('#pwd').val('');
+    //        } else if (data.status === 1) {
+    //            alert("帳號or密碼錯誤");
+    //            $('#acc').val('');
+    //            $('#pwd').val('');
 
-            } else if (data.status === 2) {
-                alert("已封鎖");
-            }
-        },
-        error: function () {
-            alert("登入失敗，請稍後重試或聯繫客服");
-        }
+    //        } else if (data.status === 2) {
+    //            alert("已封鎖");
+    //        }
+    //    },
+    //    error: function () {
+    //        alert("登入失敗，請稍後重試或聯繫客服");
+    //    }
     });
 };
 

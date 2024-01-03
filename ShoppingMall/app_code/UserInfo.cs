@@ -22,15 +22,6 @@ public class UserInfo
     /// </summary>
     public string userAcc { get; set; }
 
-    protected void Page_Load(object sender, EventArgs e)
-    {
-        UserInfo userInfo = new UserInfo()
-        {
-            userAcc = "a1234" //假資料
-        };
-        this.userAcc = $"{userInfo.userAcc}";
-    }
-
     /// <summary>
     /// 會員等級
     /// </summary>

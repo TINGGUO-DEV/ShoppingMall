@@ -43,7 +43,7 @@ function DisplayData(data) {  //response
             '<th>' + item.memo + '</th>';
 
         html += userInfo.id === item.id ?
-            '<th>' + '<button class = "btnSmall" onclick = "OpenPopUp()">修改密碼</button>' + '</th>' : '<th></th>';
+            '<th>' + '<button class = "btnSmall" id = "a">修改密碼</button>' + '</th>' : '<th></th>';
 
         html += userInfo.id !== item.id && userInfo.level !== '100' ?
             '<th>' + '<button class = "btnSmall" onclick = "OpenPopUp()">刪除</button>' + '</th>' : '<th></th>';
@@ -110,19 +110,31 @@ $(document).ready(function () {
 
     })
 
-    $('#SerchItem').on("click", function (e) {
-        var inputValue = $(e.currentTarget).val().toLowerCase();      //toLowerCase()大寫轉小寫，小寫還是小寫  抓搜尋的關鍵詞, $(this)為#SerchItem的輸入字段
-
-        $('#listAcc > tbody tr').filter(function () {
-            $(this).toggle($(this).text().toLowerCase().indexOf(inputValue) > -1);  //抓表格裏頭
-        });
-
-    });
+    $('#a').on("click", function (e) {
+        ('#a').
+    })
 
     function OpenPopUp() {
+        // 創建彈窗的 div 元素
+        var popupDiv = document.createElement('div');
+        popupDiv.className = 'popUpConfBox';
+        popupDiv.innerHTML = '<p>這是一個動態創建的彈窗</p><button onclick="closeDynamicPopup()">關閉</button>';
 
+        // 添加彈窗到 body 中
+        document.body.appendChild(popupDiv);
+
+        // 顯示彈窗
+        popupDiv.style.display = 'block';
     }
 
+    function closeDynamicPopup() {
+        // 找到並移除彈窗
+        var popupDiv = document.querySelector('.abc');
+        if (popupDiv) {
+            popupDiv.style.display = 'none';
+            document.body.removeChild(popupDiv);
+        }
+    }
 });
 
 //$.ajax({
