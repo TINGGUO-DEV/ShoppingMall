@@ -17,11 +17,55 @@ function validateEmail() {
         submitButton.innerHTML = '驗證';
     }
 }
+
+var userData = {
+    list: [
+        {
+            id: 0,
+            name: '',
+            acc: 'z1',
+            email: '19@19.com',
+            phone: '0962315875',
+            address: '',
+            level: '一般',
+            limit: false,
+            createTime: '2023-12-01 23:00:16',
+            lastTime: '2023-12-18 17:05:26'
+        },
+        {
+            id: 1,
+            name: '',
+            acc: 'a12',
+            email: '11@10.com',
+            phone: '0963215879',
+            address: '',
+            level: '一般',
+            limit: true,
+            createTime: '2023-12-10 20:00:06',
+            lastTime: '2023-12-19 16:00:06'
+        },
+        {
+            id: 2,
+            name: '小名',
+            acc: 'b15',
+            email: '12@12.com',
+            phone: '0963215874',
+            address: '台北市中正路22222號',
+            level: 'vip',
+            limit: false,
+            createTime: '2023-12-01 17:00:06',
+            lastTime: '2023-12-22 19:00:31'
+        }
+    ]
+}
+
+
+
 function NameInput(name) {
     name.value = name.value.replace(/[^a-zA-Z\u4E00-\u9FA5]/g, '');
 }
 function AddressInput(address) {
-    address.value = address.value.replace(/[^\u4E00-\u9FA5\w]/g, '');
+    address.value = address.value.replace(/[^a-zA-Z0-9\u4E00-\u9FA5]/g, '');
 }
 function MailInput(mail) {
     mail.value = mail.value.replace(/^[^a-zA-Z\d]|[^a-zA-Z\d@.-]/g, '');
@@ -71,8 +115,12 @@ function PhoneBlur(e) {
     }
 }
 
+//function ClosePopUp(e) {
+//    $(e).hide();
+//}
+
 function CancelSumbtion() {
-    document.querySelector('.popUpConfBox').style.display = 'none';
+    location.reload();
 }
 
 function Sumbtion() {
@@ -81,23 +129,31 @@ function Sumbtion() {
     var mail = $('#mail').val();
     var phone = $('#phone').val();
 
-    if (!/^[a-zA-Z\u4E00-\u9FA5]+$/.test(name)) {
+    if (!/^[a-zA-Z\u4E00-\u9FA5]*$/.test(name)) {
         alert('輸入的姓名請勿包含特殊字元ex.%#&@');
+        $('#name').val('');
+        $('#popUpConfirm').hide();
         return;
     }
 
-    if (!/^[\u4E00-\u9FA5\w]+$/.test(address)) {
+    if (!/^[\u4E00-\u9FA5\w]*$/.test(address)) {
         alert('輸入的地址請勿包含特殊字元ex.%#&@');
+        $('#address').val('');
+        $('#popUpConfirm').hide();
         return;
     }
 
     if (mail.match(/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9]+\.\w+([-.]\w+)*$/) == null) {
         alert('請確認您輸入的信箱格式是否正確');
+        $('#mail').val('');
+        $('#popUpConfirm').hide();
         return;
     }
 
     if (phone.match(/^09\d{8}$/) == null) {
         alert('請確保您輸入的是09開頭的十位電話號碼');
+        $('#phone').val('');
+        $('#popUpConfirm').hide();
         return;
     }
 

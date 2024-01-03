@@ -8,13 +8,13 @@
 <asp:Content ContentPlaceHolderID = "ContentPlaceHolder1" runat = "Server">
     <div class = "tableContainer">
         <div class = "sortItem">
+            <div class = "littleTitle">會員管理</div>
             <input id ="SerchItem" oninput = "SearchInput(this)" placeholder = "請輸入要查詢的內容" />
             <select id="SelectItem">
                 <option value = "titleSelect">排序選項</option>
                 <option value = "createTime">建立時間</option>
                 <option value = "lastTime">最後登入時間</option>
             </select>
-            <%--<img src ="../image/icons/cil-sort-descending.png" id = "sortButton" class = "sort"/>--%>
         </div>
         <table id = "listAccount">
             <thead>

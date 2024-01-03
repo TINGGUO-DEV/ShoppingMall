@@ -21,3 +21,7 @@ function ClosePopUp(popUpId) {
     var popUp = document.getElementById(popUpId);
     popUp.style.display = "none";
 }
+
+function SearchInput(searchInput) {
+    searchInput.value = searchInput.value.replace(/[^a-zA-Z\u4E00-\u9FA5\d.@]/g, '');
+}

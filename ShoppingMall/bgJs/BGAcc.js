@@ -37,16 +37,19 @@ function DisplayData(data) {  //response
         html +=
             '<tr>' +
             '<th>' + item.acc + '</th>' +
-            '<th>' + (item.level === 100 ? '最高' : '一般') + '</th>' +
+            '<th>' + (item.level === '100' ? '最高' : '一般') + '</th>' +
             '<th>' + (item.isDel ? '是' : '否') + '</th>' +
             '<th>' + item.createTime + '</th>' +
             '<th>' + item.memo + '</th>';
 
         html += userInfo.id === item.id ?
-            '<th>' + '<button class = "btnSmall" onclick = "OpenPopUp(popUpChangeBox)">修改密碼</button>' + '</th>' : '<th></th>';
+            '<th>' + '<button class = "btnSmall" onclick = "OpenPopUp()">修改密碼</button>' + '</th>' : '<th></th>';
 
-        html += userInfo.id !== item.id && userInfo.level === 1 ?
-            '<th>' + '<button class = "btnSmall" onclick = "OpenPopUp(popUpChangeBox)">刪除</button>' + '</th>' : '<th></th>';
+        html += userInfo.id !== item.id && userInfo.level !== '100' ?
+            '<th>' + '<button class = "btnSmall" onclick = "OpenPopUp()">刪除</button>' + '</th>' : '<th></th>';
+
+        html += item.acc === 'Master01' ?
+            '<th>' + '<button class = "btnSmall" onclick = "OpenPopUp()">新增管理員</button>' + '</th>' : '<th></th>';
         '</tr>';
     });
 
@@ -54,7 +57,7 @@ function DisplayData(data) {  //response
 }
 
 function SearchInput(searchInput) {
-    searchInput.value = searchInput.value.replace(/[^a-zA-Z\u4E00-\u9FA5\d.]/g, '');
+    searchInput.value = searchInput.value.replace(/[^a-zA-Z\u4E00-\u9FA5\d.@]/g, '');
 }
 
 function CreateTime() {
@@ -71,11 +74,14 @@ function CreateTime() {
             '<th>' + item.memo + '</th>';
 
         html += userInfo.id === item.id ?
-            '<th>' + '<button class = "btnSmall" onclick = "OpenPopUp(popUpChangeBox)">修改密碼</button>' + '</th>' : '<th></th>';
+                '<th>' + '<button class = "btnSmall" onclick = "OpenPopUp()">修改密碼</button>' + '</th>' : '<th></th>';
 
-        html += userInfo.id !== item.id && userInfo.level === 1 ?
-            '<th>' + '<button class = "btnSmall" onclick = "OpenPopUp(popUpChangeBox)">刪除</button>' + '</th>' : '<th></th>';
-            '</tr>';
+        html += userInfo.id !== item.id && userInfo.level !== '100' ?
+            '<th>' + '<button class = "btnSmall" onclick = "OpenPopUp()">刪除</button>' + '</th>' : '<th></th>';
+
+        html += item.acc === 'Master01' ?
+            '<th>' + '<button class = "btnSmall" onclick = "OpenPopUp()">新增管理員</button>' + '</th>' : '<th></th>';
+        '</tr>';
     });
     $('#listAcc > tbody').html(html);      //.html本來就會蓋掉所有的資料
 }
@@ -83,7 +89,16 @@ function CreateTime() {
 $(document).ready(function () {
     DisplayData(accountData);
 
-    $('#SortItem').on('change', function (e) {
+    $('#SerchItem').on("keyup", function (e) {
+        var inputValue = $(e.currentTarget).val().toLowerCase();      //toLowerCase()大寫轉小寫，小寫還是小寫  抓搜尋的關鍵詞, $(this)為#SerchItem的輸入字段
+
+        $('#listAcc > tbody tr').filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(inputValue) > -1);  //抓表格裏頭
+        });
+
+    });
+
+    $('#SelectItem').on('change', function (e) {
         var switchValue = $(e.currentTarget).val();
         switch (switchValue) {
             case "createTime":
@@ -94,6 +109,19 @@ $(document).ready(function () {
         }
 
     })
+
+    $('#SerchItem').on("click", function (e) {
+        var inputValue = $(e.currentTarget).val().toLowerCase();      //toLowerCase()大寫轉小寫，小寫還是小寫  抓搜尋的關鍵詞, $(this)為#SerchItem的輸入字段
+
+        $('#listAcc > tbody tr').filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(inputValue) > -1);  //抓表格裏頭
+        });
+
+    });
+
+    function OpenPopUp() {
+
+    }
 
 });
 

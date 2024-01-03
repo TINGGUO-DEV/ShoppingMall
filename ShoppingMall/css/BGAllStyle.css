@@ -162,13 +162,13 @@
 }
 
 #table {
-    width: 90%;
+    display: block;
     border-spacing: 0; /*間距*/
     border: 1px solid #f3f3f3;
 }
 
-th, td { /*欄寬,欄高,置中,線條*/
-    width: 120px;
+th{ /*欄寬,欄高,置中,線條*/
+    width: 300px;
     height: 40px;
     text-align: center;
     border: 0.5px solid #f3f3f3;
@@ -191,14 +191,13 @@ td { /*列*/
     margin-bottom: 8px;
 }
 
-img.sort {
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
+.littleTitle {
+    font-size: 20px;
+    margin-right:300px;
 }
 
 .btnSmall {
-    width: 80px;
+    width: 90px;
     height: 25px;
     font-size: 15px;
     background-color: #64A600;

@@ -41,7 +41,7 @@
 }
 
 function SearchInput(searchInput) {
-    searchInput.value = searchInput.value.replace(/[^a-zA-Z\u4E00-\u9FA5\d.]/g, '');
+    searchInput.value = searchInput.value.replace(/[^a-zA-Z\u4E00-\u9FA5\d.@]/g, '');
 }
 
 function OpenPopUp(popUpId) {
@@ -133,12 +133,11 @@ function LastTime() {
 $(document).ready(function () {
     DisplayData(listData);
 
-    $('#SerchItem').on("keyup", function () {
-        var inputValue = $(this).val().toLowerCase();      //toLowerCase()大寫轉小寫，小寫還是小寫  抓搜尋的關鍵詞
+    $('#SerchItem').on("keyup", function (e) {
+        var inputValue = $(e.currentTarget).val().toLowerCase();      //toLowerCase()大寫轉小寫，小寫還是小寫  抓搜尋的關鍵詞, $(this)為#SerchItem的輸入字段
 
-        $data.filter(function () {
-            $(this).toggle($this).text().toLowerCase().indexOf(inputValue) > -1
-
+    $('#listAccount > tbody tr').filter(function () {
+        $(this).toggle($(this).text().toLowerCase().indexOf(inputValue) > -1);  //抓表格裏頭
         });
 
     });
